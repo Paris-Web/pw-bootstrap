@@ -1,0 +1,34 @@
+{
+  "name": "pw-bootstrap",
+  "version": "1.0.0",
+  "description": "Paris Web custom BS4 build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paris-Web/pw-bootstrap.git"
+  },
+  "author": {
+    "name": "Gaël Poupard",
+    "url": "https://www.ffoodd.fr",
+    "email": "gael+github@ffoodd.fr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Paris-Web/pw-bootstrap/issues"
+  },
+  "files": [
+    "dist/*.{css,map}",
+    "scss/*.scss"
+  ],
+  "scripts": {
+  	"build": "node-sass src/pw.scss dist/pw.css --include-path node_modules --indent-type tab",
+   	"postbuild": "lightningcss dist/pw.css -o dist/pw.min.css --minify --browserslist --sourcemap"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.2"
+  },
+  "devDependencies": {
+    "lightningcss-cli": "^1.32.0",
+    "sass": "^1.98.0",
+    "servor": "^4.0.2"
+  }
+}
