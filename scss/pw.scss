@@ -1,0 +1,68 @@
+//
+// Paris Web style
+//
+@import "fonts";
+
+$purple: #734bf9;
+$primary: $purple;
+$pink: #e11a81;
+$blue: #007bff;
+$light: #f7f7fa;
+$dark: #25222c;
+$body-bg: #e7e5ef;
+$text-muted: #585462;
+$secondary: $pink;
+$link-color: $blue;
+$link-hover-color: $pink;
+$link-decoration: underline;
+$emphasized-link-hover-darken-percentage: 20%;
+$enable-responsive-font-sizes: true;
+$font-family-sans-serif: Nunito, Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+$headings-font-weight: 800;
+$headings-font-family: Kumbh, Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+$btn-font-weight: 700;
+$card-border-width: 0;
+$card-border-radius: 0;
+
+//
+// Bring in Bootstrap
+//
+
+@import "bootstrap/scss/functions"; // Required
+@import "bootstrap/scss/variables"; // Required
+@import "bootstrap/scss/mixins"; // Required
+
+@import "bootstrap/scss/root"; // Required
+@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/input-group"; // Requires forms
+@import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/jumbotron";
+@import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+@import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";

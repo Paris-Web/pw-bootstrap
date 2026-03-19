@@ -1,0 +1,118 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    min-height: 100vh;
+
+    > main {
+        flex: 1 0 100%;
+    }
+
+    > :is(nav, footer) {
+        flex: 0 0 auto;
+    }
+}
+
+.home {
+  font-size: 1.3rem;
+}
+
+.home-intro {
+  font-size: 1.5rem;
+}
+
+.navbar a,
+a:is(.btn, .dropdown-item, .nav-link, .list-group-item),
+.list-group-item-action {
+    text-decoration: none !important;
+}
+
+.bg-dark {
+    color: $white !important;
+
+    a {
+        color: $white;
+
+        &:not(.btn):hover {
+            color: $pink;
+        }
+    }
+}
+
+.navbar .nav-link[current="page"] {
+  font-weight: bold;
+  color: $black;
+}
+
+.card {
+  position: relative;
+  border-bottom: 2px solid #c3c3ce;
+}
+
+.card::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background: rgb(117, 83, 171);
+    background: linear-gradient(to right, rgb(225, 26, 129) 0%, rgb(5, 143, 214) 100%);
+}
+
+label:not(.form-check-label) {
+  margin: .45rem;
+  color: $text-muted;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.required label::after {
+  content: " (obligatoire)";
+  font-weight: 400;
+}
+
+:lang(en) .required label::after {
+    content: " (required)";
+}
+
+hr {
+  border-width: 2px;
+}
+
+/* HOME */
+.home-title-gradient {
+  font-family: $headings-font-family;
+  display: inline-block;
+  margin: 0 0 2.5rem;
+  line-height: 1;
+  padding-bottom: 0.1em;
+  font-weight: $headings-font-weight;
+  font-size: 3rem;
+  background: linear-gradient(220deg, $blue, $pink);
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width:768px) {
+  .home-title-gradient {
+    font-size: 5.5rem;
+  }
+}
+
+#djDebug {
+    position: absolute;
+}
+
+.memo-badge {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  font-size: 1rem;
+}

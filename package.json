@@ -20,15 +20,20 @@
     "scss/*.scss"
   ],
   "scripts": {
-  	"build": "node-sass src/pw.scss dist/pw.css --include-path node_modules --indent-type tab",
-   	"postbuild": "lightningcss dist/pw.css -o dist/pw.min.css --minify --browserslist --sourcemap"
+    "build": "node-sass scss/pw.scss css/pw.css --include-path node_modules --indent-type tab",
+    "postbuild": "lightningcss css/pw.css -o css/pw.min.css --minify --browserslist --sourcemap",
+    "start": "concurrently --kill-others \"npm:watch\" \"npm:serve\"",
+    "serve": "servor --browse --reload --secure",
+    "watch": "nodemon --watch scss --ext scss --exec \"npm run build\""
   },
   "dependencies": {
     "bootstrap": "^4.6.2"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "lightningcss-cli": "^1.32.0",
-    "sass": "^1.98.0",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.14",
     "servor": "^4.0.2"
   }
 }
