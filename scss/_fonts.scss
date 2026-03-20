@@ -2,21 +2,21 @@
   font-family: "Nunito";
   src:
     local("Nunito-Bold"),
-    url("../fonts/nunito-sans/NunitoSans-Bold.woff2") format("woff2");
+    url("#{$font-path}/nunito-sans/NunitoSans-Bold.woff2") format("woff2");
   font-weight: 700;
 }
 @font-face {
   font-family: "Nunito";
   src:
     local("Nunito-Regular"),
-    url("../fonts/nunito-sans/NunitoSans-Regular.woff2") format("woff2");
+    url("#{$font-path}/nunito-sans/NunitoSans-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: "Nunito";
   src:
     local("Nunito-BoldItalic"),
-    url("../fonts/nunito-sans/NunitoSans-BoldItalic.woff2") format("woff2");
+    url("#{$font-path}/nunito-sans/NunitoSans-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
 }
@@ -24,7 +24,7 @@
   font-family: "Nunito";
   src:
     local("Nunito-Italic"),
-    url("../fonts/nunito-sans/NunitoSans-Italic.woff2") format("woff2");
+    url("#{$font-path}/nunito-sans/NunitoSans-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
 }
@@ -33,26 +33,26 @@
   font-family: "Kumbh";
   src:
     local("KumbhSans"),
-    url("../fonts/kumbh/KumbhSans-Regular.woff2") format("woff2");
+    url("#{$font-path}/kumbh/KumbhSans-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
   font-family: "Kumbh";
   src:
     local("KumbhSans"),
-    url("../fonts/kumbh/KumbhSans-ExtraBold.woff2") format("woff2");
+    url("#{$font-path}/kumbh/KumbhSans-ExtraBold.woff2") format("woff2");
   font-weight: 800;
 }
 @font-face {
   font-family: "Kumbh";
   src:
     local("KumbhSans"),
-    url("../fonts/kumbh/KumbhSans-Black.woff2") format("woff2");
+    url("#{$font-path}/kumbh/KumbhSans-Black.woff2") format("woff2");
   font-weight: 900;
 }
 
 
 @font-face {
   font-family: "GOODBRUSH";
-  src: url("../fonts/good-brush/GOODBRUSH.woff2") format("woff2");
+  src: url("#{$font-path}/good-brush/GOODBRUSH.woff2") format("woff2");
 }
