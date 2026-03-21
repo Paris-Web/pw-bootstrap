@@ -1,25 +1,26 @@
 //
-// Paris Web style
+// Bootstrap custom build
 //
-$font-path: "../fonts";
-$img-path: "../images";
-@import "fonts";
 
 $enable-rounded: true;
 
-$purple: #734bf9;
+$purple:  #734bf9;
+$pink:    #d00770;
+$blue:    #058fd6;
+$black:   #0c0b0f;
+$light:   #ededf0;
+$dark:    #25222c;
+$yellow:  #fdc02f;
+
 $purple-light: #ad95fb;
-$pink: #d00770;
+$purple-dark: #4f27d6;
 $pink-dark: #b40b57;
-$blue: #058fd6;
 $blue-dark: #0068a8;
-$black: #0c0b0f;
-$light: #ededf0;
-$dark: #25222c;
-$yellow: #fdc02f;
 
 $primary: $purple;
 $secondary: $pink;
+$danger: $pink;
+$success: #198754 ;
 
 $body-bg: $light;
 $text-muted: #5b5b66;
@@ -40,9 +41,15 @@ $btn-border-radius-lg: 1.5rem;
 $card-border-width: 0;
 $card-border-radius: 1.5rem;
 $list-group-border-color: $light;
-$list-group-active-bg: #fff;
-$list-group-active-color: $primary;
-$list-group-active-border-color: $list-group-border-color;
+$list-group-active-bg: $primary;
+$list-group-active-color: #fff;
+$list-group-active-border-color: $purple-dark;
+
+$custom-file-text: (
+  en: "Browse",
+  fr: "Parcourir"
+);
+
 
 //
 // Bootstrap
@@ -68,7 +75,7 @@ $list-group-active-border-color: $list-group-border-color;
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar"; // Requires nav
 @import "bootstrap/scss/card";
-@import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/pagination";
 @import "bootstrap/scss/badge";
 @import "bootstrap/scss/jumbotron";
@@ -85,9 +92,3 @@ $list-group-active-border-color: $list-group-border-color;
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/print";
-
-//
-// Paris Web styles, again
-//
-
-@import "public";

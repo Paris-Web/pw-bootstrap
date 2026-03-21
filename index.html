@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/pw.min.css">
+    <link rel="stylesheet" href="css/cfp.min.css">
     <title>Paris Web — Documentation Bootstrap 4</title>
     <link rel="icon" sizes="32x32" href="favicon.ico">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -18,26 +18,20 @@
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-
-
+          <ul class="navbar-nav">
+	          <li class="nav-item mx-auto pl-5">
+	              <a class="nav-link" href="https://www.paris-web.fr">
+	              Aller sur paris-web.fr
+	              </a>
+	          </li>
               <li class="nav-item ml-3">
                   <a class="btn btn-secondary" href="/accounts/login/" >
                       Connexion
                   </a>
               </li>
-
-
               <li class="nav-item ml-3">
-                  <a class="nav-link" href="/accounts/signup/" >
+                  <a class="btn btn-outline-primary" href="/accounts/signup/" >
                       Créer un compte
-                  </a>
-              </li>
-
-
-              <li class="nav-item ml-3">
-                  <a class="btn btn-outline-primary" href="https://www.paris-web.fr">
-                      Site principal
                   </a>
               </li>
           </ul>
@@ -284,24 +278,10 @@
       <div class="col-12 col-md-8">
         <div class="card">
             <div class="card-body">
-              <ul class="nav nav-pills nav-fill" role="tablist">
-                  <li class="nav-item">
-                      <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab" aria-controls="details" aria-selected="true">Informations personnelles</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" id="specific-tab" data-toggle="tab" href="#specific" role="tab" aria-controls="social" aria-selected="false">Remarques (régime, T-shirt)</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" id="social-tab" data-toggle="tab" href="#social" role="tab" aria-controls="social" aria-selected="false">Réseaux sociaux</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" id="selfie-tab" data-toggle="tab" href="#selfie" role="tab" aria-controls="social" aria-selected="false">Ma photo</a>
-                  </li>
-              </ul>
               <form method="POST" enctype="multipart/form-data">
                   <input type="hidden" name="csrfmiddlewaretoken" value="2WTJWxtSr7GwRSre39lwF6JubKHlkgypqbAbsbIYfg74380C8w1WfsPDZyHDwvLB">
-              <input type="hidden" name="profile-TOTAL_FORMS" value="1" id="id_profile-TOTAL_FORMS"><input type="hidden" name="profile-INITIAL_FORMS" value="1" id="id_profile-INITIAL_FORMS"><input type="hidden" name="profile-MIN_NUM_FORMS" value="0" id="id_profile-MIN_NUM_FORMS"><input type="hidden" name="profile-MAX_NUM_FORMS" value="1" id="id_profile-MAX_NUM_FORMS">
-                  <div class="tab-content mt-4">
+                  <input type="hidden" name="profile-TOTAL_FORMS" value="1" id="id_profile-TOTAL_FORMS"><input type="hidden" name="profile-INITIAL_FORMS" value="1" id="id_profile-INITIAL_FORMS"><input type="hidden" name="profile-MIN_NUM_FORMS" value="0" id="id_profile-MIN_NUM_FORMS"><input type="hidden" name="profile-MAX_NUM_FORMS" value="1" id="id_profile-MAX_NUM_FORMS">
+
 
 
                           <input type="hidden" name="profile-0-user" value="320" id="id_profile-0-user">
@@ -309,8 +289,8 @@
                           <input type="hidden" name="profile-0-id" value="241" id="id_profile-0-id">
 
                       <!-- User details -->
-                      <div class="tab-pane active" id="details" role="tabpanel" aria-labelledby="details-tab">
-
+                      <fieldset>
+                      		<legend>Informations personnelles</legend>
                           <div class="form-row">
                               <div class="col-md-6 col-12">
                                   <div class="form-group"><label for="id_first_name">Prénom</label><input type="text" name="first_name" value="Gaël" maxlength="150" class="form-control" placeholder="Prénom" title="" id="id_first_name"></div>
@@ -343,498 +323,6 @@
 
 <option value="IT">Italie</option>
 
-<option value="GB">Royaume-Uni</option>
-
-<option value="" selected="">-----</option>
-
-<option value="AF">Afghanistan</option>
-
-<option value="ZA">Afrique du Sud</option>
-
-<option value="AL">Albanie</option>
-
-<option value="DZ">Algérie</option>
-
-<option value="AD">Andorre</option>
-
-<option value="AO">Angola</option>
-
-<option value="AI">Anguilla</option>
-
-<option value="AQ">Antarctique</option>
-
-<option value="AG">Antigua-et-Barbuda</option>
-
-<option value="SA">Arabie Saoudite</option>
-
-<option value="AR">Argentine</option>
-
-<option value="AM">Arménie</option>
-
-<option value="AW">Aruba</option>
-
-<option value="AU">Australie</option>
-
-<option value="AT">Autriche</option>
-
-<option value="AZ">Azerbaïdjan</option>
-
-<option value="BS">Bahamas</option>
-
-<option value="BH">Bahreïn</option>
-
-<option value="BD">Bangladesh</option>
-
-<option value="BB">Barbade</option>
-
-<option value="BE">Belgique</option>
-
-<option value="BZ">Bélize</option>
-
-<option value="BJ">Bénin</option>
-
-<option value="BM">Bermudes</option>
-
-<option value="BT">Bhoutan</option>
-
-<option value="BY">Biélorussie</option>
-
-<option value="MM">Birmanie</option>
-
-<option value="BO">Bolivie</option>
-
-<option value="BQ">Bonaire, Saint Eustache et Saba</option>
-
-<option value="BA">Bosnie-Herzégovine</option>
-
-<option value="BW">Botswana</option>
-
-<option value="BR">Brésil</option>
-
-<option value="BN">Brunei</option>
-
-<option value="BG">Bulgarie</option>
-
-<option value="BF">Burkina Faso</option>
-
-<option value="BI">Burundi</option>
-
-<option value="KH">Cambodge</option>
-
-<option value="CM">Cameroun</option>
-
-<option value="CA">Canada</option>
-
-<option value="CV">Cap-Vert</option>
-
-<option value="CL">Chili</option>
-
-<option value="CN">Chine</option>
-
-<option value="CY">Chypre</option>
-
-<option value="CO">Colombie</option>
-
-<option value="KM">Comores</option>
-
-<option value="CG">Congo</option>
-
-<option value="KP">Corée du Nord</option>
-
-<option value="KR">Corée du Sud</option>
-
-<option value="CR">Costa Rica</option>
-
-<option value="CI">Côte d'Ivoire</option>
-
-<option value="HR">Croatie</option>
-
-<option value="CU">Cuba</option>
-
-<option value="CW">Curaçao</option>
-
-<option value="DK">Danemark</option>
-
-<option value="DJ">Djibouti</option>
-
-<option value="DM">Dominique</option>
-
-<option value="EG">Égypte</option>
-
-<option value="AE">Émirats arabes unis</option>
-
-<option value="EC">Équateur</option>
-
-<option value="ER">Érythrée</option>
-
-<option value="EE">Estonie</option>
-
-<option value="SZ">Eswatini (République d')</option>
-
-<option value="US">États-Unis d'Amérique</option>
-
-<option value="ET">Éthiopie</option>
-
-<option value="FJ">Fidji</option>
-
-<option value="FI">Finlande</option>
-
-<option value="GA">Gabon</option>
-
-<option value="GM">Gambie</option>
-
-<option value="GE">Géorgie</option>
-
-<option value="GS">Géorgie du Sud-et-les Îles Sandwich du Sud</option>
-
-<option value="GH">Ghana</option>
-
-<option value="GI">Gibraltar</option>
-
-<option value="GR">Grèce</option>
-
-<option value="GD">Grenade</option>
-
-<option value="GL">Groenland</option>
-
-<option value="GP">Guadeloupe</option>
-
-<option value="GU">Guam</option>
-
-<option value="GT">Guatémala</option>
-
-<option value="GG">Guernesey</option>
-
-<option value="GN">Guinée</option>
-
-<option value="GQ">Guinée équatoriale</option>
-
-<option value="GW">Guinée-Bissau</option>
-
-<option value="GY">Guyane</option>
-
-<option value="GF">Guyane française</option>
-
-<option value="HT">Haïti</option>
-
-<option value="HN">Honduras</option>
-
-<option value="HK">Hong Kong</option>
-
-<option value="HU">Hongrie</option>
-
-<option value="BV">Île Bouvet</option>
-
-<option value="CX">Île Christmas</option>
-
-<option value="IM">Île de Man</option>
-
-<option value="SJ">Île Jan Mayen</option>
-
-<option value="NF">Île Norfolk</option>
-
-<option value="PN">Île Pitcairn</option>
-
-<option value="AX">Îles Åland</option>
-
-<option value="KY">Îles Caïmans</option>
-
-<option value="CC">Îles Cocos</option>
-
-<option value="CK">Îles Cook</option>
-
-<option value="FO">Îles Féroé</option>
-
-<option value="HM">Îles Heard-et-MacDonald</option>
-
-<option value="FK">Îles Malouines</option>
-
-<option value="MP">Îles Mariannes du Nord</option>
-
-<option value="MH">Îles Marshal</option>
-
-<option value="UM">Îles mineures éloignées des États-Unis</option>
-
-<option value="TC">Îles Turques-et-Caïques</option>
-
-<option value="VG">Îles Vierges britanniques</option>
-
-<option value="VI">Îles Vierges des États-Unis</option>
-
-<option value="IN">Inde</option>
-
-<option value="ID">Indonésie</option>
-
-<option value="IQ">Irak</option>
-
-<option value="IR">Iran</option>
-
-<option value="IE">Irlande</option>
-
-<option value="IS">Islande</option>
-
-<option value="IL">Israël</option>
-
-<option value="JM">Jamaïque</option>
-
-<option value="JP">Japon</option>
-
-<option value="JE">Jersey</option>
-
-<option value="JO">Jordanie</option>
-
-<option value="KZ">Kazakhstan</option>
-
-<option value="KE">Kenya</option>
-
-<option value="KG">Kirghizistan</option>
-
-<option value="KI">Kiribati</option>
-
-<option value="KW">Koweït</option>
-
-<option value="LA">Laos</option>
-
-<option value="LS">Lesotho</option>
-
-<option value="LV">Lettonie</option>
-
-<option value="LB">Liban</option>
-
-<option value="LR">Libéria</option>
-
-<option value="LY">Libye</option>
-
-<option value="LI">Liechtenstein</option>
-
-<option value="LT">Lituanie</option>
-
-<option value="LU">Luxembourg</option>
-
-<option value="MO">Macao</option>
-
-<option value="MG">Madagascar</option>
-
-<option value="MY">Malaisie</option>
-
-<option value="MW">Malawi</option>
-
-<option value="MV">Maldives</option>
-
-<option value="ML">Mali</option>
-
-<option value="MT">Malte</option>
-
-<option value="MA">Maroc</option>
-
-<option value="MQ">Martinique</option>
-
-<option value="MU">Maurice</option>
-
-<option value="MR">Mauritanie</option>
-
-<option value="YT">Mayotte</option>
-
-<option value="MX">Mexique</option>
-
-<option value="FM">Micronésie (États Fédérés de)</option>
-
-<option value="MD">Moldavie</option>
-
-<option value="MC">Monaco</option>
-
-<option value="MN">Mongolie</option>
-
-<option value="ME">Monténégro</option>
-
-<option value="MS">Montserrat</option>
-
-<option value="MZ">Mozambique</option>
-
-<option value="NA">Namibie</option>
-
-<option value="NR">Nauru</option>
-
-<option value="NP">Népal</option>
-
-<option value="NI">Nicaragua</option>
-
-<option value="NE">Niger</option>
-
-<option value="NG">Nigeria</option>
-
-<option value="NU">Niue</option>
-
-<option value="NO">Norvège</option>
-
-<option value="NC">Nouvelle-Calédonie</option>
-
-<option value="NZ">Nouvelle-Zélande</option>
-
-<option value="OM">Oman</option>
-
-<option value="UG">Ouganda</option>
-
-<option value="UZ">Ouzbékistan</option>
-
-<option value="PK">Pakistan</option>
-
-<option value="PW">Palaos</option>
-
-<option value="PS">Palestine, État de</option>
-
-<option value="PA">Panama</option>
-
-<option value="PG">Papouasie-Nouvelle-Guinée</option>
-
-<option value="PY">Paraguay</option>
-
-<option value="NL">Pays-Bas</option>
-
-<option value="PE">Pérou</option>
-
-<option value="PH">Philippines</option>
-
-<option value="PL">Pologne</option>
-
-<option value="PF">Polynésie française</option>
-
-<option value="PR">Porto Rico</option>
-
-<option value="PT">Portugal</option>
-
-<option value="QA">Qatar</option>
-
-<option value="CF">République centrafricaine</option>
-
-<option value="MK">République de Macédoine du Nord</option>
-
-<option value="CD">République démocratique du Congo</option>
-
-<option value="DO">République dominicaine</option>
-
-<option value="CZ">République tchèque</option>
-
-<option value="RE">Réunion, La</option>
-
-<option value="RO">Roumanie</option>
-
-<option value="RU">Russie</option>
-
-<option value="RW">Rwanda</option>
-
-<option value="EH">Sahara occidental</option>
-
-<option value="BL">Saint Barthélemy</option>
-
-<option value="KN">Saint-Christophe-et-Niévès</option>
-
-<option value="SM">Saint-Marin</option>
-
-<option value="MF">Saint-Martin (Antilles françaises)</option>
-
-<option value="SX">Saint-Martin (Royaume des Pays-Bas)</option>
-
-<option value="PM">Saint-Pierre-et-Miquelon</option>
-
-<option value="VA">Saint-Siège</option>
-
-<option value="VC">Saint-Vincent-et-les-Grenadines</option>
-
-<option value="SH">Sainte-Hélène, Ascension et Tristan da Cunha</option>
-
-<option value="LC">Sainte-Lucie</option>
-
-<option value="SB">Salomon</option>
-
-<option value="SV">Salvador</option>
-
-<option value="WS">Samoa</option>
-
-<option value="AS">Samoa américaines</option>
-
-<option value="ST">Sao Tomé-et-Principe</option>
-
-<option value="SN">Sénégal</option>
-
-<option value="RS">Serbie</option>
-
-<option value="SC">Seychelles</option>
-
-<option value="SL">Sierra Leone</option>
-
-<option value="SG">Singapour</option>
-
-<option value="SK">Slovaquie</option>
-
-<option value="SI">Slovénie</option>
-
-<option value="SO">Somalie</option>
-
-<option value="SD">Soudan</option>
-
-<option value="SS">Soudan du Sud</option>
-
-<option value="LK">Sri Lanka</option>
-
-<option value="SE">Suède</option>
-
-<option value="CH">Suisse</option>
-
-<option value="SR">Suriname</option>
-
-<option value="SY">Syrie</option>
-
-<option value="TJ">Tadjikistan</option>
-
-<option value="TW">Taïwan</option>
-
-<option value="TZ">Tanzanie</option>
-
-<option value="TD">Tchad</option>
-
-<option value="TF">Terres australes et antarctiques françaises</option>
-
-<option value="IO">Territoire britannique de l'océan Indien</option>
-
-<option value="TH">Thaïlande</option>
-
-<option value="TL">Timor Oriental</option>
-
-<option value="TG">Togo</option>
-
-<option value="TK">Tokelau</option>
-
-<option value="TO">Tonga</option>
-
-<option value="TT">Trinidad et Tobago</option>
-
-<option value="TN">Tunisie</option>
-
-<option value="TM">Turkménistan</option>
-
-<option value="TR">Turquie</option>
-
-<option value="TV">Tuvalu</option>
-
-<option value="UA">Ukraine</option>
-
-<option value="UY">Uruguay</option>
-
-<option value="VU">Vanuatu</option>
-
-<option value="VE">Venezuela</option>
-
-<option value="VN">Viêt Nam</option>
-
-<option value="WF">Wallis et Futuna</option>
-
-<option value="YE">Yémen</option>
-
-<option value="ZM">Zambie</option>
-
-<option value="ZW">Zimbabwe</option>
-
 </select>
                                   </div>
                               </div>
@@ -845,15 +333,19 @@
   <small class="form-text text-muted">Utilisé uniquement pour vous contacter en cas de communication de dernière minute</small>
 
 </div>
-                                  <div class="form-group"><label for="id_profile-0-company">Société</label><input type="text" name="profile-0-company" maxlength="150" class="form-control" title="" id="id_profile-0-company"></div>
                               </div>
                               <div class="col-md-6 col-12">
+                              <div class="form-group"><label for="id_profile-0-company">Société</label><input type="text" name="profile-0-company" maxlength="150" class="form-control" title="" id="id_profile-0-company"></div>
+
+                              </div>
+                              <div class="col-12">
                                   <div class="form-group required"><label for="id_profile-0-biography">Biographie</label><textarea name="profile-0-biography" cols="40" rows="10" class="form-control" placeholder="Qui êtes-vous ? Dites-nous tout :)" title="" id="id_profile-0-biography"></textarea></div>
                               </div>
                           </div>
-                      </div>
+                      </fieldset>
                       <!-- Social networks -->
-                      <div class="tab-pane" id="social" role="tabpanel" aria-labelledby="social-tab">
+                      <fieldset>
+                      		<legend>Réseaux sociaux</legend>
                           <div class="form-row">
                               <div class="col-md-6 col-12">
                                   <div class="form-group"><label for="id_profile-0-linkedin">LinkedIn</label><input type="text" name="profile-0-linkedin" maxlength="150" class="form-control" placeholder="LinkedIn" title="" id="id_profile-0-linkedin"></div>
@@ -862,19 +354,27 @@
                               </div>
                               <div class="col-md-6 col-12">
                                   <div class="form-group"><label for="id_profile-0-github">GitHub</label><input type="text" name="profile-0-github" maxlength="150" class="form-control" placeholder="GitHub" title="" id="id_profile-0-github"></div>
-                                  <div class="form-group"><label for="id_profile-0-personal_site">Site personel</label><input type="text" name="profile-0-personal_site" maxlength="150" class="form-control" placeholder="Site personel" title="" id="id_profile-0-personal_site"></div>
+                                  <div class="form-group"><label for="id_profile-0-personal_site">Site personnel</label><input type="text" name="profile-0-personal_site" maxlength="150" class="form-control" placeholder="Site personnel" title="" id="id_profile-0-personal_site"></div>
                               </div>
                           </div>
                           <div class="form-group"><label for="id_profile-0-social_networks">Autres réseaux</label><textarea name="profile-0-social_networks" cols="40" rows="10" class="form-control" placeholder="Autres réseaux" title="" id="id_profile-0-social_networks"></textarea></div>
-                      </div>
+                          </fieldset>
                       <!-- Photo -->
-                      <div class="tab-pane" id="selfie" role="tabpanel" aria-labelledby="selfie-tab">
-                          <div class="form-group"><label for="id_profile-0-photo">Selfie</label><br><input type="file" name="profile-0-photo" accept="image/*" class="form-control-file" title="" id="id_profile-0-photo"></div>
-                      </div>
+                      <fieldset>
+                      		<legend>Photo</legend>
+                          <div class="form-group">
+	                          <div class="custom-file">
+	                            <input type="file" class="custom-file-input" id="id_profile-0-photo" accept="image/*" class="form-control-file">
+	                            <label class="custom-file-label" for="id_profile-0-photo">Photo</label>
+	                          </div>
+                          </div>
+                          </fieldset>
                       <!-- Specific needs -->
-                      <div class="tab-pane" id="specific" role="tabpanel" aria-labelledby="specific-tab">
+                      <fieldset>
+                      	<legend>Remarques (régime, etc.)</legend>
+
                           <div class="form-row">
-                              <div class="col-md-4 col-12">
+                              <div class="col-md-6 col-12">
                                   <div class="form-group">
                                       <label for="id_profile-0-contact_lang">Langue préférée pour la prise de contact</label>
                                       <select name="profile-0-contact_lang" class="custom-select" id="id_profile-0-contact_lang">
@@ -885,7 +385,7 @@
 </select>
                                   </div>
                               </div>
-                              <div class="col-md-4 col-12">
+                              <div class="col-md-6 col-12">
                                   <div class="form-group">
                                       <label for="id_profile-0-diet">Préférences alimentaires</label>
                                       <select name="profile-0-diet" class="custom-select" id="id_profile-0-diet">
@@ -900,41 +400,7 @@
 </select>
                                   </div>
                               </div>
-                              <div class="col-md-4 col-12">
-                                  <div class="form-group">
-                                      <label for="id_profile-0-shirt-size">Taille de t-shirt</label>
-                                      <select name="profile-0-shirt_size" class="custom-select" id="id_profile-0-shirt_size">
-<option value="" selected="">---------</option>
 
-<option value="None">Je ne souhaite pas de t-shirt</option>
-
-<option value="F_XS">Femme XS</option>
-
-<option value="F_S">Femme S</option>
-
-<option value="F_M">Femme M</option>
-
-<option value="F_L">Femme L</option>
-
-<option value="F_XL">Femme XL</option>
-
-<option value="F_XXL">Femme XXL</option>
-
-<option value="M_XS">Homme XS</option>
-
-<option value="M_S">Homme S</option>
-
-<option value="M_M">Homme M</option>
-
-<option value="M_L">Homme L</option>
-
-<option value="M_XL">Homme XL</option>
-
-<option value="M_XXL">Homme XXL</option>
-
-</select>
-                                  </div>
-                              </div>
                               <div class="col-md-6 col-12">
                                   <div class="form-group"><label for="id_profile-0-allergies">Allergies</label><textarea name="profile-0-allergies" cols="40" rows="10" maxlength="250" class="form-control" title="" id="id_profile-0-allergies"></textarea></div>
                               </div>
@@ -942,9 +408,8 @@
                                   <div class="form-group"><label for="id_profile-0-remarks">Besoins spécifiques</label><textarea name="profile-0-remarks" cols="40" rows="10" class="form-control" title="" id="id_profile-0-remarks"></textarea></div>
                               </div>
                           </div>
-                      </div>
+                      </fieldset>
 
-                  </div>
 
 
                   <button type="submit" class="btn btn-secondary mt-3">
@@ -958,6 +423,93 @@
 
 
 
+
+
+  <div class="alert alert-danger" role="alert">
+                                  <strong>Ce champ est obligatoire. Numéro de téléphone</strong>
+                              </div>
+
+
+
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="close">×</button>
+      Votre sujet a été enregistré !
+  </div>
+
+
+
+  <div class="row justify-content-center">
+      <div class="col-12 col-md-4">
+          <h1 class="mb-4">Mes sujets</h1>
+          <p>Afin de procéder à une sélection la plus juste possible, nous limitons le nombre de sujets envoyés à <strong>5</strong> par personne.</p>
+          <p>Vous pouvez enregistrer autant de brouillons que vous le désirez.</p>
+
+              <p>Vous pouvez encore envoyer 4 sujets.</p>
+
+
+                  <a href="/cfp/submit/" class="btn btn-block btn-primary">Proposer un sujet</a>
+
+
+
+      </div>
+      <div class="col-12 col-md-8">
+          <div class="card">
+              <div class="card-body">
+
+
+
+
+
+                      <ul class="list-group list-group-flush px-0">
+
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span>
+                              <a href="/cfp/papers/366">Test de conférence</a>
+
+                              </span>
+                              <div class="btn-group">
+
+
+
+  <strong class="text-muted">Envoyé</strong>
+
+
+                              </div>
+                          </li>
+
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                              <span>
+                              <a href="/cfp/papers/367">Hop hop hop</a>
+
+                              </span>
+                              <div class="btn-group">
+
+
+
+  <a href="/cfp/papers/367/publish" role="button" class="btn btn-outline-secondary">Envoyer</a>
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+
+          <a class="dropdown-item" href="/cfp/papers/367/share">Ajouter un orateur ou une oratrice</a>
+
+      <a class="dropdown-item" href="/cfp/papers/367/edit">Modifier</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="/cfp/papers/367/delete">Supprimer le sujet</a>
+  </div>
+
+
+                              </div>
+                          </li>
+
+                      </ul>
+
+
+              </div>
+          </div>
+      </div>
+  </div>
 
 
 

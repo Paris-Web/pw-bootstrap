@@ -20,8 +20,8 @@
     "scss/*.scss"
   ],
   "scripts": {
-    "build": "node-sass scss/pw.scss css/pw.css --include-path node_modules --indent-type tab",
-    "postbuild": "lightningcss css/pw.css -o css/pw.min.css --minify --browserslist --sourcemap",
+    "build": "node-sass scss -o css --include-path node_modules --indent-type tab",
+    "postbuild": "lightningcss css/cfp.css -o css/cfp.min.css --minify --browserslist --sourcemap",
     "start": "concurrently --kill-others \"npm:watch\" \"npm:serve\"",
     "serve": "servor --browse --reload --secure",
     "watch": "nodemon --watch scss --ext scss --exec \"npm run build\""
