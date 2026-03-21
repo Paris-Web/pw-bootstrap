@@ -1,3 +1,9 @@
+$font-path: "../fonts";
+$img-path: "../images";
+
+@import "variables";
+@import "fonts";
+
 //
 // Reboot
 //
@@ -73,16 +79,12 @@ label:not(.form-check-label) {
 	}
 }
 
-.navbar .nav-link[current="page"] {
-  font-weight: $font-weight-bold;
-  color: $black;
-}
-
 .navbar-nav {
 	width: 100%;
 }
 
-.list-group-item.active {
+.list-group-item.active,
+.navbar .nav-link[aria-current="page"] {
 	font-weight: $font-weight-bold;
 }
 

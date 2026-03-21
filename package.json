@@ -16,12 +16,14 @@
     "url": "https://github.com/Paris-Web/pw-bootstrap/issues"
   },
   "files": [
-    "dist/*.{css,map}",
+    "static/",
     "scss/*.scss"
   ],
   "scripts": {
-    "build": "node-sass scss -o css --include-path node_modules --indent-type tab",
-    "postbuild": "lightningcss css/cfp.css -o css/cfp.min.css --minify --browserslist --sourcemap",
+    "build": "node-sass scss -o static/css --include-path node_modules --indent-type tab",
+    "postbuild": "concurrently --kill-others \"npm:css:*\"",
+    "css:bootstrap": "lightningcss static/css/bootstrap.css -o static/css/bootstrap.min.css --minify --browserslist --sourcemap",
+    "css:public": "lightningcss static/css/public.css -o static/css/public.min.css --minify --browserslist --sourcemap",
     "start": "concurrently --kill-others \"npm:watch\" \"npm:serve\"",
     "serve": "servor --browse --reload --secure",
     "watch": "nodemon --watch scss --ext scss --exec \"npm run build\""

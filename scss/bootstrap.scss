@@ -2,54 +2,7 @@
 // Bootstrap custom build
 //
 
-$enable-rounded: true;
-
-$purple:  #734bf9;
-$pink:    #d00770;
-$blue:    #058fd6;
-$black:   #0c0b0f;
-$light:   #ededf0;
-$dark:    #25222c;
-$yellow:  #fdc02f;
-
-$purple-light: #ad95fb;
-$purple-dark: #4f27d6;
-$pink-dark: #b40b57;
-$blue-dark: #0068a8;
-
-$primary: $purple;
-$secondary: $pink;
-$danger: $pink;
-$success: #198754 ;
-
-$body-bg: $light;
-$text-muted: #5b5b66;
-$link-color: $secondary;
-$link-hover-color: $pink-dark;
-$link-decoration: underline;
-$emphasized-link-hover-darken-percentage: 20%;
-$enable-responsive-font-sizes: true;
-$font-family-sans-serif: Nunito, Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-$headings-font-weight: 800;
-$headings-font-family: Kumbh, Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-$small-font-size: .75rem;
-$btn-font-weight: 700;
-$btn-padding-x: 1.25rem;
-$btn-border-radius: 1.25rem;
-$btn-padding-x-lg: 1.5rem;
-$btn-border-radius-lg: 1.5rem;
-$card-border-width: 0;
-$card-border-radius: 1.5rem;
-$list-group-border-color: $light;
-$list-group-active-bg: $primary;
-$list-group-active-color: #fff;
-$list-group-active-border-color: $purple-dark;
-
-$custom-file-text: (
-  en: "Browse",
-  fr: "Parcourir"
-);
-
+@import "variables";
 
 //
 // Bootstrap

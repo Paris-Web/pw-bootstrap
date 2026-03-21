@@ -4,6 +4,7 @@
     local("Nunito-Bold"),
     url("#{$font-path}/nunito-sans/NunitoSans-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
@@ -11,6 +12,7 @@
     local("Nunito-Regular"),
     url("#{$font-path}/nunito-sans/NunitoSans-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
@@ -19,6 +21,7 @@
     url("#{$font-path}/nunito-sans/NunitoSans-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Nunito";
@@ -27,6 +30,7 @@
     url("#{$font-path}/nunito-sans/NunitoSans-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +39,7 @@
     local("KumbhSans"),
     url("#{$font-path}/kumbh/KumbhSans-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "Kumbh";
@@ -42,6 +47,7 @@
     local("KumbhSans"),
     url("#{$font-path}/kumbh/KumbhSans-ExtraBold.woff2") format("woff2");
   font-weight: 800;
+  font-display: swap;
 }
 @font-face {
   font-family: "Kumbh";
@@ -49,10 +55,13 @@
     local("KumbhSans"),
     url("#{$font-path}/kumbh/KumbhSans-Black.woff2") format("woff2");
   font-weight: 900;
+  font-display: swap;
 }
 
 
 @font-face {
   font-family: "GOODBRUSH";
   src: url("#{$font-path}/good-brush/GOODBRUSH.woff2") format("woff2");
+  font-display: swap;
+  unicode-range: U+30,U+32,U+36;
 }

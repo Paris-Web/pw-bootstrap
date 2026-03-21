@@ -1,44 +1,3 @@
-@font-face {
-		font-family: "Nunito";
-		src: local("Nunito-Bold"), url("../fonts/nunito-sans/NunitoSans-Bold.woff2") format("woff2");
-		font-weight: 700; }
-
-@font-face {
-		font-family: "Nunito";
-		src: local("Nunito-Regular"), url("../fonts/nunito-sans/NunitoSans-Regular.woff2") format("woff2");
-		font-weight: 400; }
-
-@font-face {
-		font-family: "Nunito";
-		src: local("Nunito-BoldItalic"), url("../fonts/nunito-sans/NunitoSans-BoldItalic.woff2") format("woff2");
-		font-weight: 700;
-		font-style: italic; }
-
-@font-face {
-		font-family: "Nunito";
-		src: local("Nunito-Italic"), url("../fonts/nunito-sans/NunitoSans-Italic.woff2") format("woff2");
-		font-weight: 400;
-		font-style: italic; }
-
-@font-face {
-		font-family: "Kumbh";
-		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-Regular.woff2") format("woff2");
-		font-weight: 400; }
-
-@font-face {
-		font-family: "Kumbh";
-		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-ExtraBold.woff2") format("woff2");
-		font-weight: 800; }
-
-@font-face {
-		font-family: "Kumbh";
-		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-Black.woff2") format("woff2");
-		font-weight: 900; }
-
-@font-face {
-		font-family: "GOODBRUSH";
-		src: url("../fonts/good-brush/GOODBRUSH.woff2") format("woff2"); }
-
 :root {
 		--blue: #058fd6;
 		--indigo: #6610f2;
@@ -3344,9 +3303,9 @@ input[type="button"].btn-block {
 				display: none; }
 
 .navbar-light .navbar-brand {
-		color: rgba(12, 11, 15, 0.9); }
+		color: #0c0b0f; }
 		.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-				color: rgba(12, 11, 15, 0.9); }
+				color: #0c0b0f; }
 
 .navbar-light .navbar-nav .nav-link {
 		color: rgba(12, 11, 15, 0.5); }
@@ -3359,7 +3318,7 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-		color: rgba(12, 11, 15, 0.9); }
+		color: #0c0b0f; }
 
 .navbar-light .navbar-toggler {
 		color: rgba(12, 11, 15, 0.5);
@@ -3371,9 +3330,9 @@ input[type="button"].btn-block {
 .navbar-light .navbar-text {
 		color: rgba(12, 11, 15, 0.5); }
 		.navbar-light .navbar-text a {
-				color: rgba(12, 11, 15, 0.9); }
+				color: #0c0b0f; }
 				.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
-						color: rgba(12, 11, 15, 0.9); }
+						color: #0c0b0f; }
 
 .navbar-dark .navbar-brand {
 		color: #fff; }
@@ -6865,119 +6824,3 @@ a.text-dark:hover, a.text-dark:focus {
 		.table .thead-dark th {
 				color: inherit;
 				border-color: #dee2e6; } }
-
-html {
-		position: relative;
-		min-height: 100%; }
-
-body {
-		display: flex;
-		flex-direction: column;
-		gap: 5vh;
-		min-height: 100vh;
-		background-image: url("../images/bg-home.png"); }
-		body > main {
-				flex: 1 0 100%; }
-		body > :is(nav, footer) {
-				flex: 0 0 auto; }
-
-::selection {
-		background-color: #ad95fb;
-		background-color: color-mix(in srgb, #ad95fb, transparent 25%);
-		color: #0c0b0f; }
-
-hr {
-		border-width: 1px; }
-
-ul:not([class]) li {
-		list-style: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><circle fill='%23FF52AB' cx='8' cy='8' r='8'></circle><circle fill='white' cx='8' cy='8' r='7'></circle><circle fill='%23E11A81' cx='8' cy='8' r='3'></circle></svg>"); }
-
-legend {
-		font-family: Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
-		font-weight: 800; }
-
-label:not(.form-check-label) {
-		margin: .25rem;
-		color: #5b5b66;
-		font-size: 0.875rem;
-		font-weight: 700; }
-
-.required label::after {
-		content: " (obligatoire)";
-		font-weight: 400; }
-
-:lang(en) .required label::after {
-		content: " (required)"; }
-
-.form-text {
-		margin: .25rem; }
-
-.nav-link, .nav-link:hover, .nav-link:focus {
-		text-decoration: underline; }
-
-.navbar .nav-link[current="page"] {
-		font-weight: 700;
-		color: #0c0b0f; }
-
-.navbar-nav {
-		width: 100%; }
-
-.list-group-item.active {
-		font-weight: 700; }
-
-.dropdown-toggle::after {
-		vertical-align: .1em; }
-
-.dropdown-toggle-split {
-		padding-left: .75rem; }
-
-.badge {
-		font-family: Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif; }
-
-.memo-badge {
-		position: absolute;
-		right: 1.25rem;
-		top: 1.25rem;
-		font-size: 1rem; }
-
-.home {
-		font-size: 1.3rem; }
-
-.home-intro {
-		font-size: 1.5rem; }
-
-.home-title-gradient {
-		font-family: "GOODBRUSH", Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
-		display: inline-block;
-		margin: 0 0 2.5rem;
-		line-height: 1;
-		padding-bottom: 0.1em;
-		font-weight: 900;
-		font-size: 3rem; }
-		.home-title-gradient time {
-				background: linear-gradient(220deg, #058fd6, #d00770);
-				background-clip: text;
-				color: transparent; }
-		.home-title-gradient::after {
-				content: "";
-				display: block;
-				width: 100%;
-				height: .4lh;
-				background-image: url("../images/pink-swish.svg");
-				background-position: center bottom;
-				background-repeat: no-repeat;
-				background-size: 15rem; }
-
-@media (min-width: 768px) {
-		.home-title-gradient {
-				font-size: 5.5rem; } }
-
-.bg-dark {
-		color: #fff !important; }
-		.bg-dark a {
-				color: #fff; }
-				.bg-dark a:hover, .bg-dark a:focus {
-						text-decoration: none; }
-
-#djDebug {
-		position: absolute; }
