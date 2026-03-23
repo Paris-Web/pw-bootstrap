@@ -309,19 +309,16 @@ h2, .h2 {
 						font-size: calc(1.325rem + 0.9vw) ; } }
 
 h3, .h3 {
-		font-size: 1.75rem; }
+		font-size: 1.375rem; }
 		@media (max-width: 1200px) {
 				h3, .h3 {
-						font-size: calc(1.3rem + 0.6vw) ; } }
+						font-size: calc(1.2625rem + 0.15vw) ; } }
 
 h4, .h4 {
-		font-size: 1.5rem; }
-		@media (max-width: 1200px) {
-				h4, .h4 {
-						font-size: calc(1.275rem + 0.3vw) ; } }
+		font-size: 1.25rem; }
 
 h5, .h5 {
-		font-size: 1.25rem; }
+		font-size: 1.15rem; }
 
 h6, .h6 {
 		font-size: 1rem; }
@@ -3303,9 +3300,9 @@ input[type="button"].btn-block {
 				display: none; }
 
 .navbar-light .navbar-brand {
-		color: #0c0b0f; }
+		color: #d00770; }
 		.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-				color: #0c0b0f; }
+				color: #d00770; }
 
 .navbar-light .navbar-nav .nav-link {
 		color: rgba(12, 11, 15, 0.5); }
@@ -3318,7 +3315,7 @@ input[type="button"].btn-block {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-		color: #0c0b0f; }
+		color: #d00770; }
 
 .navbar-light .navbar-toggler {
 		color: rgba(12, 11, 15, 0.5);
@@ -3330,9 +3327,9 @@ input[type="button"].btn-block {
 .navbar-light .navbar-text {
 		color: rgba(12, 11, 15, 0.5); }
 		.navbar-light .navbar-text a {
-				color: #0c0b0f; }
+				color: #d00770; }
 				.navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
-						color: #0c0b0f; }
+						color: #d00770; }
 
 .navbar-dark .navbar-brand {
 		color: #fff; }

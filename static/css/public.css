@@ -97,6 +97,11 @@ label:not(.form-check-label) {
 .nav-link, .nav-link:hover, .nav-link:focus {
 		text-decoration: underline; }
 
+.active .nav-link {
+		text-decoration-color: #d00770;
+		text-decoration-thickness: .1rem;
+		text-underline-offset: .5rem; }
+
 .navbar-nav {
 		width: 100%; }
 

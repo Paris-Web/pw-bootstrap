@@ -77,6 +77,12 @@ label:not(.form-check-label) {
 	&, &:hover, &:focus {
 		text-decoration: underline;
 	}
+
+	.active & {
+		text-decoration-color: $secondary;
+  	text-decoration-thickness: .1rem;
+    text-underline-offset: .5rem;
+	}
 }
 
 .navbar-nav {
