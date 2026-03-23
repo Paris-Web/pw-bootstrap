@@ -17,7 +17,7 @@ $blue-dark: #0068a8;
 $primary: $purple;
 $secondary: $pink;
 $danger: $pink;
-$success: #198754 ;
+$success: #198754;
 
 $body-bg: $light;
 $text-muted: #5b5b66;
@@ -36,6 +36,8 @@ $font-size-base: 1rem;
 $h3-font-size: $font-size-base * 1.375;
 $h4-font-size: $font-size-base * 1.25;
 $h5-font-size: $font-size-base * 1.15;
+$hr-border-width: 0;
+$hr-margin-y: 2rem;
 $btn-font-weight: 700;
 $btn-padding-x: 1.25rem;
 $btn-border-radius: 1.25rem;
@@ -53,3 +55,6 @@ $custom-file-text: (
   en: "Browse",
   fr: "Parcourir"
 );
+
+// Paris Web only
+$stamp-color: $blue;

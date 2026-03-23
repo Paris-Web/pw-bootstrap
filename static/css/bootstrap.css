@@ -360,10 +360,10 @@ h6, .h6 {
 						font-size: calc(1.475rem + 2.7vw) ; } }
 
 hr {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 		border: 0;
-		border-top: 1px solid rgba(12, 11, 15, 0.1); }
+		border-top: 0 solid rgba(12, 11, 15, 0.1); }
 
 small,
 .small {

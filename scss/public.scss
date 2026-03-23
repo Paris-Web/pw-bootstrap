@@ -33,9 +33,18 @@ body {
   background-color: color-mix(in srgb, #{$purple-light}, transparent 25%);
   color: $black;
 }
+h3 {
+	color: $text-muted;
+}Z
+
+dd {
+	margin-bottom: 0;
+}
 
 hr {
-  border-width: 1px;
+	background: url('#{$img-path}/bg-lines.svg') 50% / contain no-repeat;
+  height: 2rem;
+  margin-inline: -1.25rem;
 }
 
 ul:not([class]) li {
@@ -113,6 +122,50 @@ label:not(.form-check-label) {
   right: 1.25rem;
   top: 1.25rem;
   font-size: 1rem;
+}
+
+.card-post-it {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	margin-top: 2rem;
+	transform: rotate(1deg);
+	filter: drop-shadow(1px 1px #{$light})
+					drop-shadow(1px -1px #{$light})
+					drop-shadow(-1px 1px #{$light})
+					drop-shadow(-1px -1px #{$light});
+
+	.card-body {
+		margin-top: -2rem;
+	}
+
+	&::before {
+		content: url('#{$img-path}/bg-postit.svg');
+		translate: 0 -2rem;
+	}
+}
+
+.stamp {
+	color: $stamp-color;
+	border-color: currentcolor;
+	transform: translateX(8rem) rotate(5deg);
+
+	.list-group-item & { transform: translateX(-1rem) rotate(5deg); }
+}
+
+.title-with-mark {
+	position: relative;
+	z-index: 1;
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    display: block;
+    inset-inline: -0.2em;
+    inset-block: 0 -0.4em;
+    background-image: url("#{$img-path}/blue-mark.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 //

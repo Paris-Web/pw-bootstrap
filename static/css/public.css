@@ -1,51 +1,43 @@
 @font-face {
 		font-family: "Nunito";
 		src: local("Nunito-Bold"), url("../fonts/nunito-sans/NunitoSans-Bold.woff2") format("woff2");
-		font-weight: 700;
-		font-display: swap; }
+		font-weight: 700; }
 
 @font-face {
 		font-family: "Nunito";
 		src: local("Nunito-Regular"), url("../fonts/nunito-sans/NunitoSans-Regular.woff2") format("woff2");
-		font-weight: 400;
-		font-display: swap; }
+		font-weight: 400; }
 
 @font-face {
 		font-family: "Nunito";
 		src: local("Nunito-BoldItalic"), url("../fonts/nunito-sans/NunitoSans-BoldItalic.woff2") format("woff2");
 		font-weight: 700;
-		font-style: italic;
-		font-display: swap; }
+		font-style: italic; }
 
 @font-face {
 		font-family: "Nunito";
 		src: local("Nunito-Italic"), url("../fonts/nunito-sans/NunitoSans-Italic.woff2") format("woff2");
 		font-weight: 400;
-		font-style: italic;
-		font-display: swap; }
+		font-style: italic; }
 
 @font-face {
 		font-family: "Kumbh";
 		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-Regular.woff2") format("woff2");
-		font-weight: 400;
-		font-display: swap; }
+		font-weight: 400; }
 
 @font-face {
 		font-family: "Kumbh";
 		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-ExtraBold.woff2") format("woff2");
-		font-weight: 800;
-		font-display: swap; }
+		font-weight: 800; }
 
 @font-face {
 		font-family: "Kumbh";
 		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-Black.woff2") format("woff2");
-		font-weight: 900;
-		font-display: swap; }
+		font-weight: 900; }
 
 @font-face {
 		font-family: "GOODBRUSH";
 		src: url("../fonts/good-brush/GOODBRUSH.woff2") format("woff2");
-		font-display: swap;
 		unicode-range: U+30,U+32,U+36; }
 
 html {
@@ -68,8 +60,17 @@ body {
 		background-color: color-mix(in srgb, #ad95fb, transparent 25%);
 		color: #0c0b0f; }
 
+h3 {
+		color: #5b5b66; }
+
+Z
+dd {
+		margin-bottom: 0; }
+
 hr {
-		border-width: 1px; }
+		background: url("../images/bg-lines.svg") 50%/contain no-repeat;
+		height: 2rem;
+		margin-inline: -1.25rem; }
 
 ul:not([class]) li {
 		list-style: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><circle fill='%23FF52AB' cx='8' cy='8' r='8'></circle><circle fill='white' cx='8' cy='8' r='7'></circle><circle fill='%23E11A81' cx='8' cy='8' r='3'></circle></svg>"); }
@@ -123,6 +124,38 @@ label:not(.form-check-label) {
 		right: 1.25rem;
 		top: 1.25rem;
 		font-size: 1rem; }
+
+.card-post-it {
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+		margin-top: 2rem;
+		transform: rotate(1deg);
+		filter: drop-shadow(1px 1px #ededf0) drop-shadow(1px -1px #ededf0) drop-shadow(-1px 1px #ededf0) drop-shadow(-1px -1px #ededf0); }
+		.card-post-it .card-body {
+				margin-top: -2rem; }
+		.card-post-it::before {
+				content: url("../images/bg-postit.svg");
+				translate: 0 -2rem; }
+
+.stamp {
+		color: #058fd6;
+		border-color: currentcolor;
+		transform: translateX(8rem) rotate(5deg); }
+		.list-group-item .stamp {
+				transform: translateX(-1rem) rotate(5deg); }
+
+.title-with-mark {
+		position: relative;
+		z-index: 1; }
+		.title-with-mark::after {
+				content: "";
+				z-index: -1;
+				position: absolute;
+				display: block;
+				inset-inline: -0.2em;
+				inset-block: 0 -0.4em;
+				background-image: url("../images/blue-mark.svg");
+				background-repeat: no-repeat; }
 
 .home {
 		font-size: 1.3rem; }
