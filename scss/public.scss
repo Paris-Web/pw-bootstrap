@@ -8,6 +8,7 @@ $img-path: "../images";
 // Reboot
 //
 html {
+		background-color: $dark;
     position: relative;
     min-height: 100%;
 }
@@ -33,9 +34,10 @@ body {
   background-color: color-mix(in srgb, #{$purple-light}, transparent 25%);
   color: $black;
 }
+
 h3 {
 	color: $text-muted;
-}Z
+}
 
 dd {
 	margin-bottom: 0;
@@ -165,6 +167,10 @@ label:not(.form-check-label) {
     inset-block: 0 -0.4em;
     background-image: url("#{$img-path}/blue-mark.svg");
     background-repeat: no-repeat;
+  }
+
+  .sticky-top:has(&) {
+  	top: 1.5rem;
   }
 }
 

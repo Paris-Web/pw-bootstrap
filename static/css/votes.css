@@ -1,0 +1,179 @@
+@font-face {
+		font-family: "Nunito";
+		src: local("Nunito-Bold"), url("../fonts/nunito-sans/NunitoSans-Bold.woff2") format("woff2");
+		font-weight: 700; }
+
+@font-face {
+		font-family: "Nunito";
+		src: local("Nunito-Regular"), url("../fonts/nunito-sans/NunitoSans-Regular.woff2") format("woff2");
+		font-weight: 400; }
+
+@font-face {
+		font-family: "Nunito";
+		src: local("Nunito-BoldItalic"), url("../fonts/nunito-sans/NunitoSans-BoldItalic.woff2") format("woff2");
+		font-weight: 700;
+		font-style: italic; }
+
+@font-face {
+		font-family: "Nunito";
+		src: local("Nunito-Italic"), url("../fonts/nunito-sans/NunitoSans-Italic.woff2") format("woff2");
+		font-weight: 400;
+		font-style: italic; }
+
+@font-face {
+		font-family: "Kumbh";
+		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-Regular.woff2") format("woff2");
+		font-weight: 400; }
+
+@font-face {
+		font-family: "Kumbh";
+		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-ExtraBold.woff2") format("woff2");
+		font-weight: 800; }
+
+@font-face {
+		font-family: "Kumbh";
+		src: local("KumbhSans"), url("../fonts/kumbh/KumbhSans-Black.woff2") format("woff2");
+		font-weight: 900; }
+
+@font-face {
+		font-family: "GOODBRUSH";
+		src: url("../fonts/good-brush/GOODBRUSH.woff2") format("woff2");
+		unicode-range: U+30-39; }
+
+body {
+		font-size: .875rem; }
+
+table {
+		font-feature-settings: "tnum"; }
+
+/*
+ * Sidebar
+ */
+@media (min-width: 992px) {
+		.sidebar {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 100;
+				/* Behind the navbar */
+				padding: 0;
+				box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1); }
+		.sidebar-sticky {
+				position: sticky;
+				top: 3rem;
+				/* Height of navbar */
+				height: calc(100vh - 3rem);
+				padding-top: .5rem;
+				overflow-x: hidden;
+				overflow-y: auto;
+				/* Scrollable contents if viewport is shorter than content. */ } }
+
+.sidebar-heading {
+		font-family: Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+		font-size: .75rem;
+		font-weight: 800;
+		text-transform: uppercase; }
+
+/*
+ * Navbar
+ */
+.navbar-brand {
+		padding-top: .75rem;
+		padding-bottom: .75rem;
+		font-family: Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+		font-size: 1rem;
+		font-weight: 900;
+		text-decoration: none;
+		box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25); }
+
+.navbar .form-control {
+		padding: .75rem 1rem;
+		border-width: 0;
+		border-radius: 0; }
+
+.form-control-dark {
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-color: rgba(255, 255, 255, 0.1); }
+
+.form-control-dark:focus {
+		border-color: transparent;
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); }
+
+/*
+ * Utilities
+ */
+.border-top {
+		border-top: 1px solid #ededf0; }
+
+.border-bottom {
+		border-bottom: 1px solid #ededf0; }
+
+.refinement-choice {
+		cursor: pointer; }
+
+#comments blockquote {
+		border-left: .25rem solid silver;
+		padding-left: .5rem; }
+
+.bi {
+		width: 1rem;
+		height: 1rem;
+		vertical-align: sub; }
+
+.sidebar .nav-link .bi {
+		margin-right: .25rem;
+		color: inherit; }
+
+.bi-x-circle::before {
+		content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23d00770' viewBox='0 0 16 16'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/><path d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708'/></svg>"); }
+
+.bi-check-circle::before {
+		content: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23198754' viewBox='0 0 16 16'><path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16'/><path d='m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05'/></svg>"); }
+
+main {
+		background-image: url("../images/bg-home.png");
+		min-height: calc(100vh - 3rem); }
+
+ul:not([class]) li {
+		list-style: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'><circle fill='%23FF52AB' cx='8' cy='8' r='8'></circle><circle fill='white' cx='8' cy='8' r='7'></circle><circle fill='%23E11A81' cx='8' cy='8' r='3'></circle></svg>"); }
+
+.card {
+		margin-block: 1.5rem; }
+
+:is(.card-img, .card-img-top):only-child {
+		border-radius: 1.5rem; }
+
+.card-header {
+		background-color: transparent;
+		padding: 0;
+		margin: 0.75rem 1.25rem; }
+		.accordion .card-header .btn::after {
+				content: "";
+				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2325222c' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>");
+				float: right;
+				width: 1rem;
+				height: 1rem; }
+		.accordion .card-header [aria-expanded="true"] {
+				background-color: #734bf9;
+				color: #fff; }
+				.accordion .card-header [aria-expanded="true"]::after {
+						transform: rotate(-180deg);
+						filter: invert(100%); }
+
+.title-with-mark {
+		position: relative;
+		z-index: 1; }
+		.title-with-mark::after {
+				content: "";
+				z-index: -1;
+				position: absolute;
+				display: block;
+				inset-inline: -0.2rem;
+				inset-block: 0 -0.4rem;
+				background-image: url("../images/blue-mark.svg");
+				background-repeat: no-repeat; }
+
+.font-goodbrush {
+		font-family: GOODBRUSH, Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif; }

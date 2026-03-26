@@ -24,6 +24,7 @@
     "postbuild": "concurrently --kill-others \"npm:css:*\"",
     "css:bootstrap": "lightningcss static/css/bootstrap.css -o static/css/bootstrap.min.css --minify --browserslist --sourcemap",
     "css:public": "lightningcss static/css/public.css -o static/css/public.min.css --minify --browserslist --sourcemap",
+    "css:votes": "lightningcss static/css/votes.css -o static/css/votes.min.css --minify --browserslist --sourcemap",
     "start": "concurrently --kill-others \"npm:watch\" \"npm:serve\"",
     "serve": "servor --browse --reload --secure",
     "watch": "nodemon --watch scss --ext scss --exec \"npm run build\""

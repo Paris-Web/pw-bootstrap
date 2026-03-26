@@ -24,6 +24,7 @@ $text-muted: #5b5b66;
 $link-color: $secondary;
 $link-hover-color: $pink-dark;
 $link-decoration: underline;
+$border-radius: 1.5rem;
 $emphasized-link-hover-darken-percentage: 20%;
 $enable-responsive-font-sizes: true;
 $font-weight-bold: 700;
@@ -42,14 +43,26 @@ $btn-font-weight: 700;
 $btn-padding-x: 1.25rem;
 $btn-border-radius: 1.25rem;
 $btn-padding-x-lg: 1.5rem;
-$btn-border-radius-lg: 1.5rem;
+$btn-border-radius-lg: $border-radius;
 $card-border-width: 0;
-$card-border-radius: 1.5rem;
+$card-border-radius: $border-radius;
+$card-spacer-y: .75rem;
+$card-spacer-x: 1.25rem;
 $list-group-border-color: $light;
 $list-group-active-bg: $primary;
 $list-group-active-color: $white;
 $list-group-active-border-color: $purple-dark;
 $navbar-light-active-color: $secondary;
+$badge-font-size: .75em;
+$badge-font-weight: 800;
+$table-bg: #fff;
+$table-accent-bg: rgba($secondary, .02);
+$nav-tabs-border-color:             rgba($secondary, 0.2);
+$nav-tabs-border-radius:            $border-radius / 4;
+$nav-tabs-link-hover-border-color:  rgba($secondary, 0.2);
+$nav-tabs-link-active-color:        $dark;
+$nav-tabs-link-active-bg:           #fff;
+$nav-tabs-link-active-border-color: transparent;
 
 $custom-file-text: (
   en: "Browse",
@@ -58,3 +71,8 @@ $custom-file-text: (
 
 // Paris Web only
 $stamp-color: $blue;
+
+@function escape-color($color: $primary) {
+	$without-octothorp: str-slice(inspect($color), 2, 10);
+	@return $without-octothorp;
+}

@@ -38,9 +38,10 @@
 @font-face {
 		font-family: "GOODBRUSH";
 		src: url("../fonts/good-brush/GOODBRUSH.woff2") format("woff2");
-		unicode-range: U+30,U+32,U+36; }
+		unicode-range: U+30-39; }
 
 html {
+		background-color: #25222c;
 		position: relative;
 		min-height: 100%; }
 
@@ -63,7 +64,6 @@ body {
 h3 {
 		color: #5b5b66; }
 
-Z
 dd {
 		margin-bottom: 0; }
 
@@ -156,6 +156,8 @@ label:not(.form-check-label) {
 				inset-block: 0 -0.4em;
 				background-image: url("../images/blue-mark.svg");
 				background-repeat: no-repeat; }
+		.sticky-top:has(.title-with-mark) {
+				top: 1.5rem; }
 
 .home {
 		font-size: 1.3rem; }

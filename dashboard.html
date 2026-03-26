@@ -1,0 +1,2148 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" sizes="32x32" href="favicon.ico">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <title>Tableau de bord - CfP@Paris Web 2026</title>
+
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/votes.min.css" />
+    </head>
+    <body>
+        <nav role="navigation" aria-label="Navigation secondaire" class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark flex-lg-nowrap p-0">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-controls="topnav mainnav" aria-expanded="false" aria-label="Déplier la navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse multi-collapse navbar-collapse" id="topnav">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/votes/">
+            <abbr title="Appel à sujets" aria-label="Appel à sujets">CfP</abbr>@Paris Web
+        </a>
+        <form class="w-100" method="GET" action="/votes/search/">
+        <input class="form-control form-control-dark w-100" id="q" name="q" type="text" placeholder="Votre recherche (puis entrée)" aria-label="Recherche" value="">
+            </form>
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="/votes/logout/">Déconnexion</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav role="navigation" aria-label="Navigation principale" class="navbar-expand-lg col-12 col-lg-2 bg-white sidebar mt-lg-5">
+    <div id="mainnav" class="collapse multi-collapse d-lg-block sidebar-sticky pt-3 pt-lg-0">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="/votes/">
+		                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16">
+		                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"></path>
+		                </svg>
+                    Tableau de bord
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/votes/papers/">
+		                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16">
+		                  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"></path>
+		                </svg>
+                    Propositions
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/votes/speakers/">
+	                	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+		                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
+		                </svg>
+                    Orateurices
+                </a>
+            </li>
+            <li>
+                <div class="sidebar-heading px-3 mt-4 mb-1">Votes</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/votes/remaining/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
+	                          <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"></path>
+	                          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"></path>
+	                        </svg>
+                            Mon reste à voter
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/votes/my-scoreboard/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+	                          <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"></path>
+	                        </svg>
+                            Mon classement
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/votes/scoreboard/">
+	                        	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+		                          <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"></path>
+		                        </svg>
+                            Classement général
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
+                    <span>Le programme</span>
+                    <a class="d-flex align-items-center text-muted" target='_blank' href="/schedule/start/" data-toggle="tooltip" title="Mode sélection">
+	                    	<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mode sélection" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+		                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
+		                      <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"></path>
+		                    </svg>
+                        &nbsp;
+                    </a>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/">
+                        		<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+		                          <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"></path>
+		                        </svg>
+                            Récapitulatif
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/conferences/">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+	                          <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"></path>
+	                        </svg>
+                            Conférences
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/workshops/">
+		                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
+		                          <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"></path>
+		                        </svg>
+                            Ateliers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/pending/">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+	                          <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"></path>
+	                        </svg>
+                            Le ballotage
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/mailing/">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+	                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
+	                        </svg>
+                            Mailings
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="sidebar-heading px-3 mt-4 mb-1">Suivi</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/speakers/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+		                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
+		                          <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"></path>
+		                        </svg>
+                            Suivi orateurices
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/schedule/hosting/">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-house-check" viewBox="0 0 16 16">
+	                          <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z"></path>
+	                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"></path>
+	                        </svg>
+                            Suivi hébergement
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                <!-- Alerts -->
+
+
+    <h1 class="h2 sr-only">Tableau de bord</h1>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card mb-4">
+                <h2 class="card-header h5 title-with-mark">Mes votes</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        Salut Gaël,<br/>
+
+                        tu as noté toutes les propositions. Reviens plus tard, quand de nouvelles propositions seront arrivées !
+
+                    </p>
+
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-header h5 title-with-mark">Exports</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                       Les exports disponibles
+                    </p>
+                    <a href="/votes/export-general/" class="btn btn-primary my-1">Propositions notées au moins 3</a>
+                    <a href="/votes/export-cards/" class="btn btn-primary my-1">Cartes de propositions notées au moins 3</a>
+                    <a href="/votes/export-trello/" class="btn btn-primary my-1">Générer le board Trello</a>
+                    <a href="/votes/export-kirby/" class="btn btn-primary my-1">Générer le programme Kirby</a>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-header h5 title-with-mark">Code d’invitation</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                        Les codes d’invitation permettent la création de comptes même en dehors des périodes d’appel à sujets.
+                     </p>
+                    <a href="/votes/invitation_code/generate" class="btn btn-primary my-1">Générer un nouveau code d’invitation</a>
+
+
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-header h5 title-with-mark">RSS/Atom</h2>
+                <div class="card-body">
+                    <p class="card-text">
+                       Les flux disponibles
+                    </p>
+
+                    <p class="card-text">
+                        Un token doit être généré pour pouvoir activer les flux.
+                    </p>
+                    <a href="/votes/feed/generate" class="btn btn-primary my-1">Générer un token</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card mb-2">
+                <h2 class="card-header h5 title-with-mark">Les chiffres</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Propositions soumises
+                        <span class="h6 mb-0 text-secondary font-goodbrush">7</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Brouillons en cours
+                        <span class="h6 mb-0 text-secondary font-goodbrush">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Orateurs potentiels
+                        <span class="h6 mb-0 text-secondary font-goodbrush">6</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>
+                        Votes du staff (<span class="font-goodbrush">21</span> gens, soit <strong class="font-goodbrush">147</strong> votes potentiel)
+                            </span>
+                        <span class="h6 mb-0 text-secondary font-goodbrush">48</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Commentaires
+                        <span class="h6 mb-0 text-secondary font-goodbrush">8</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2 class="card-header h5 title-with-mark">Répartition par format</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Conférences
+                        <span class="h6 mb-0 text-secondary font-goodbrush">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Mini conférences
+                        <span class="h6 mb-0 text-secondary font-goodbrush">6</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Ateliers
+                        <span class="h6 mb-0 text-secondary font-goodbrush">0</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Double ateliers
+                        <span class="h6 mb-0 text-secondary font-goodbrush">0</span>
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text text-muted">Seules les propositions soumises sont prises en compte dans le calcul.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Alerts -->
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+<h1 class="h2">Propositions</h1>
+<div class="btn-toolbar mb-2 mb-md-0">
+<div class="btn-group mr-2">
+<button class="btn btn-sm btn-outline-secondary" data-toggle="collapse" data-target="#filters" aria-expanded="false" aria-controls="filters">Filtrer</button>
+</div>
+</div>
+</div>
+<div class="collapse mb-4" id="filters">
+<div class="card card-body">
+<form action="" method="get">
+<div class="form-group"><label for="id_title">Titre</label><input type="text" name="title" class="form-control" placeholder="Titre" title="" id="id_title"></div>
+<div class="form-group"><label for="id_content">Description</label><input type="text" name="content" class="form-control" placeholder="Description" title="" id="id_content"></div>
+<div class="form-group"><label for="id_summary">Résumé</label><input type="text" name="summary" class="form-control" placeholder="Résumé" title="" id="id_summary"></div>
+<div class="form-group"><label for="id_staff_notes">Notes équipe</label><input type="text" name="staff_notes" class="form-control" placeholder="Notes équipe" title="" id="id_staff_notes"></div>
+<div class="form-group"><label for="id_remarks">Besoins spécifiques</label><input type="text" name="remarks" class="form-control" placeholder="Besoins spécifiques" title="" id="id_remarks"></div>
+<div class="form-group"><label for="id_target_audience">Taille d’audience souhaitée</label><input type="number" name="target_audience" step="any" class="form-control" placeholder="Taille d’audience souhaitée" title="" id="id_target_audience"></div>
+<div class="form-group"><label for="id_guid">Guid</label><input type="text" name="guid" class="form-control" placeholder="Guid" title="" id="id_guid"></div>
+<div class="form-group"><label for="id_edition">Édition</label><select name="edition" class="form-control" title="" id="id_edition">
+<option value="" selected="">---------</option>
+
+<option value="2023">Édition 2023</option>
+
+<option value="2022">Édition 2022</option>
+
+<option value="2021">Édition 2021</option>
+
+<option value="2024">Édition 2024</option>
+
+<option value="2025">Édition 2025</option>
+
+<option value="2026">Édition 2026</option>
+
+</select></div>
+<div class="form-group"><label for="id_tags">Mots-clés nom contains</label><input type="text" name="tags" class="form-control" placeholder="Mots-clés nom contains" title="" id="id_tags"></div>
+<div class="form-group"><label for="id_authors">Auteurs</label><select name="authors" class="form-control" title="" id="id_authors" multiple="">
+<option value="1126">Santos Richardson (richardson)</option>
+
+<option value="1097">VO Raphaël Tuong Tho (raphael_tuong_tho)</option>
+
+<option value="649">Mouton-Dubosc Xavier (xavier)</option>
+
+<option value="821">Abdallah Amélie (AmelieAlonah)</option>
+
+<option value="1139">Loubet Patricia (patricia)</option>
+
+<option value="915">Aboaf Emmanuelle (eaboaf)</option>
+
+<option value="1100">Bossard Cécilia (cecilia)</option>
+
+<option value="629">Audras Jean-Baptiste (audrasjb)</option>
+
+<option value="1114">Bourdier Aurore (aurore)</option>
+
+<option value="502">Bocquin Perrine (perrine)</option>
+
+<option value="642">Lasorsa Yohan (sinedied)</option>
+
+<option value="617">Vasseur Cédric (cedricvasseur)</option>
+
+<option value="1115">Lépine Jean-François (Halleck45)</option>
+
+<option value="872">Valadier Franck (franck)</option>
+
+<option value="1137">SABLONNIÈRE Hubert (hsablonniere)</option>
+
+<option value="1113">NJAKO MOLOM Louis Fredice (luifr10)</option>
+
+<option value="1125">Descoubes Kevin (kevin)</option>
+
+<option value="881">Nicol Alex (alexandrenicol)</option>
+
+<option value="645">Cozian Dylan (DylanCozian)</option>
+
+<option value="699">Schapira Boris (borisschapira)</option>
+
+<option value="730">Bernier Dan (dan)</option>
+
+<option value="602">Alexandre Damien (damienalexandre)</option>
+
+<option value="1146">Ciesla Mariusz (mariusz)</option>
+
+<option value="1147">  (charlineh)</option>
+
+<option value="1153">Lozano Alexis (alexislozano)</option>
+
+<option value="610">Poupard Gaël (ffoodd_fr)</option>
+
+<option value="928">Crofte Geoffrey (geoffreycrofte)</option>
+
+<option value="1190">Paul Franck (franck-paul)</option>
+
+<option value="503">Hervé Morgane (morgane.herve)</option>
+
+<option value="1108">Sekerger Éline (ElineSekerger)</option>
+
+<option value="1101">Buenerd Mathilde (mathilde)</option>
+
+<option value="717">Dupleix Mathieu (mathieu3)</option>
+
+<option value="656">Bourdain Laurie-Anne (Laurie-Anne)</option>
+
+<option value="878">Rosenberg Nathalie (Natouille)</option>
+
+<option value="612">Yharrassarry Raphaël (iErgo)</option>
+
+<option value="505">Ripert Sunny (sunny)</option>
+
+<option value="1081">Roux Noëlie (noelie)</option>
+
+<option value="1156">HERLEDAN Jérôme "Genma" (jerome_genma)</option>
+
+<option value="865">Collot Damien (DamienCollot)</option>
+
+<option value="673">Goetter Raphael (raphaelgoetter)</option>
+
+<option value="704">Lucas Audart (Slocaly)</option>
+
+<option value="1134">Legrand Benjamin (b-legrand)</option>
+
+<option value="1116">Wolf Guillaume (guillaume)</option>
+
+<option value="28">Kozon Yann (yann.kozon)</option>
+
+<option value="1095">Lourenço Marina (Mej)</option>
+
+<option value="608">Hurteau Marion (MarionLeHerisson)</option>
+
+<option value="611">courboulay vincent (vincentc)</option>
+
+<option value="837">VINCENT Jean-Pierre (jpvincent)</option>
+
+<option value="693">🎙🥑 m4dz (m4d_z)</option>
+
+<option value="1090">Rivière Noémie (noemie)</option>
+
+<option value="705">Malgontier Daphné (daphne)</option>
+
+<option value="1106">Werner Matthieu (matthieuwerner)</option>
+
+<option value="1127">Perrin Margaux (margaux)</option>
+
+<option value="1135">Abou Khaled Rachel (rachel)</option>
+
+<option value="874">Porteneuve Christophe (tdd)</option>
+
+<option value="1148">Charline Humeau (humchaop)</option>
+
+<option value="1417">LE CAM Nicolas (nlecam)</option>
+
+<option value="923">Galland Yoann (yoann.galland)</option>
+
+<option value="1160">Adrien Baptiste (shinework)</option>
+
+<option value="737">Dunglas Kévin (dunglas)</option>
+
+<option value="1167">Fainstein Elisabeth (OfficierAzarov)</option>
+
+<option value="728">Linsolas Romain (linsolas)</option>
+
+<option value="549">Haim-Lubczanski Sarah (sarah)</option>
+
+<option value="1157">Levasseur Clément (charlotte)</option>
+
+<option value="720">Sulpis Julien (jsulpis)</option>
+
+<option value="1176">Heude Claire (monday-hazard)</option>
+
+<option value="1045">KLAUK Fanny (klaukf)</option>
+
+<option value="856">Sparesotto Anais (sparesotto_an)</option>
+
+<option value="1260">Quest Christian (cquest)</option>
+
+<option value="744">pinchon karim (kpn13)</option>
+
+<option value="977">Minasyan Marie (MarieMinasyan)</option>
+
+<option value="838">de Vries Hidde (hidde)</option>
+
+<option value="1140">Loubet Patricia (Patouche93)</option>
+
+<option value="1177">Senn Johan (johan.senn)</option>
+
+<option value="1204">Fanuel Lison (lfanuelTanaguru)</option>
+
+<option value="548">Mathiau Julie (julie.mathiau)</option>
+
+<option value="773">Parisot Thomas (thom4parisot)</option>
+
+<option value="1118">Walberg Scharff Aurora (aurora.sofie@gmail.com)</option>
+
+<option value="875">Jarrand Thomas (Tom32i)</option>
+
+<option value="1099">Tama Jérôme (jtama)</option>
+
+<option value="1074">Dvorak Michel (michel.dvorak)</option>
+
+<option value="546">Cavalier Anne (anne)</option>
+
+<option value="783">Hernandez Sara  (sara.hernandez)</option>
+
+<option value="1168">de Vauxmoret Emmanuel (emmanuel)</option>
+
+<option value="916">Doublier Thanh Lan (ThanhLan)</option>
+
+<option value="1082">Guyard Angi (Angi-g)</option>
+
+<option value="1418">Deloumeau-Prigent Kaelig (kaelig)</option>
+
+<option value="561">Nonnenmacher François (francois)</option>
+
+<option value="1183">Allainmat Florian (f.allainmat)</option>
+
+<option value="1138">Hauguel Morgane (Morgane_H)</option>
+
+<option value="1102">MAIZA Abderahmen (abderahmen)</option>
+
+<option value="1107">  (Eline_Sekerger)</option>
+
+<option value="942">Ayoub Guillaume (liZe)</option>
+
+<option value="732">Guézennec Pierre (guezennec.pierre)</option>
+
+<option value="847">Semeteys Raphaël (raphiki)</option>
+
+<option value="1161">Simiand Romain (romain)</option>
+
+<option value="957">Jouanneau Alexis (alexis)</option>
+
+<option value="1170">  (AJuliette)</option>
+
+<option value="1083">Servical Stanley (stanlee974)</option>
+
+<option value="1194">Gillier Pierre-Yves (pygillier)</option>
+
+<option value="1158">Letarte Eric (eric@andfriends.ca)</option>
+
+<option value="1211">Carpentier Marianne (MariannaCa)</option>
+
+<option value="972">Devernay Satyagraha Laurent (laurent)</option>
+
+<option value="1229">Harvey Noémie (agencenano)</option>
+
+<option value="596">Drouvroy Sophie (sophie)</option>
+
+<option value="597">Porteneuve Christophe (christophe)</option>
+
+<option value="1234">  (mc2i_dch)</option>
+
+<option value="1084">Quinio Emma (emma)</option>
+
+<option value="1092">Le Borgne Marie (marie)</option>
+
+<option value="785">Bodin-Hullin Jacques (jacquesbh)</option>
+
+<option value="839">CARON Antoine (Slashgear)</option>
+
+<option value="1149">Humeau Charline (charline)</option>
+
+<option value="595">Robert Joachim  (joachim)</option>
+
+<option value="1178">Malamidou Vayia (VayiaM)</option>
+
+<option value="1217">Menard Alexis (darktears)</option>
+
+<option value="1192">Delorme Sébastien (sebastien)</option>
+
+<option value="1155">Ripert Sunny (sunny4)</option>
+
+<option value="1103">ISSAKA HAMA Barhamou (HamaBarhamou)</option>
+
+<option value="863">Gavanier Marc (marc.gavanier)</option>
+
+<option value="1235"> Anna-Livia (Anna-Livia)</option>
+
+<option value="1119">Corcessin Mathieu (mathieucorcessin)</option>
+
+<option value="1129">Jane Cabagnot Ruby (RubyJane88)</option>
+
+<option value="1150"> Develle (Develle)</option>
+
+<option value="1142">Serrano Benoit (BenoitSerrano)</option>
+
+<option value="1206">Poulin Jean-francois (jean-francois)</option>
+
+<option value="938">Anglade Lucie (grewn0uille)</option>
+
+<option value="828">Deschamps Stéphane (stephane)</option>
+
+<option value="1141">Hoffmann Nicolas (nicolas8)</option>
+
+<option value="994">Clouzeau Christophe (Christophe_Cl)</option>
+
+<option value="1205">Thibault Thomas (thomasT)</option>
+
+<option value="1198">Steiner Thomas (tomayac)</option>
+
+<option value="964">Veyron Albane (Albane)</option>
+
+<option value="912">Peynot Harmonie (hpeynot)</option>
+
+<option value="826">Poupard Gaël (gael.poupard)</option>
+
+<option value="647">Bortzmeyer Stéphane (bortzmeyer)</option>
+
+<option value="876">Hanna Richard (supertanuki)</option>
+
+<option value="1159">Bouchery Frederic (frederic)</option>
+
+<option value="975">Maxime Thoonsen (MaximeThoonsen)</option>
+
+<option value="845">Mammeri Naji (naji)</option>
+
+<option value="1171">Audema Juliette (JulietteA)</option>
+
+<option value="1270">Dupuy Pierre-Alexandre (pierre-alexandre)</option>
+
+<option value="1223">Garnier-Moiroux Daniel (Kehrlann)</option>
+
+<option value="1179"> fjulien (fjulien)</option>
+
+<option value="966">PETIT-CHARLES Jonathan (john972)</option>
+
+<option value="1199">Villet Vincent (VincentVillet)</option>
+
+<option value="943">Baju SARAH (SarahBaju)</option>
+
+<option value="1245">Guilbaud Chloé (chloe)</option>
+
+<option value="1218">Leloutre-Got Willy (willy)</option>
+
+<option value="948">Malassingne Delphine (DelphineM.)</option>
+
+<option value="1230">ALOUANE Ayoub (ayoub)</option>
+
+<option value="1241">ROBINE Gaëtan (Gaëtan)</option>
+
+<option value="989">Aniort Vincent (sanvin)</option>
+
+<option value="1250">Grumeau Remi (RemiGrumeau)</option>
+
+<option value="1265">Arber Adam (Adamangeloe)</option>
+
+<option value="1255">Castelein Nathan (nathan)</option>
+
+<option value="1124">DENIS Samuel (SamCandy)</option>
+
+<option value="1251">Imhof Émilie (emilie)</option>
+
+<option value="1085">Fridhi Naël (nael)</option>
+
+<option value="790">Ammeloot Pierre (pierre)</option>
+
+<option value="940">Poyet Candice (Laboranth)</option>
+
+<option value="988">Hauguel Morgane (MorganeH)</option>
+
+<option value="817">Hoffmann Nicolas (nico3333fr)</option>
+
+<option value="1200">Frézier Christophe (cfrezier)</option>
+
+<option value="1261">Breheret-Girardin Christophe (CHBG)</option>
+
+<option value="1246">Mérand Céline (celine.merand@reseau.eseo.fr)</option>
+
+<option value="1240">Thélème Audrey (audrey)</option>
+
+<option value="1143">Kutateladze Mikhail (mikhail)</option>
+
+<option value="1109">LEGENDRE Damien (damien)</option>
+
+<option value="1151">  (Benedicte)</option>
+
+<option value="1228">Klein Manuel (cchaumet)</option>
+
+<option value="788">Lœuillet Nicolas (nicolas.loeuillet)</option>
+
+<option value="1120">Corcessin Mathieu (mathieu)</option>
+
+<option value="824">Masson Marion (marion.masson)</option>
+
+<option value="1093">Messaoudi Yasmine (syena)</option>
+
+<option value="890">Milbergue Magali (MagaliMilbergue)</option>
+
+<option value="1212">Smet Catherine (Cate)</option>
+
+<option value="1356">Tardy Julie (jut)</option>
+
+<option value="1419">clavier thomas (thomas)</option>
+
+<option value="786">Nitot Tristan (nitot)</option>
+
+<option value="986">Drouvroy Sophie (cyberbaloo_)</option>
+
+<option value="935">glatt gerald (gerald.glatt)</option>
+
+<option value="947">Sylla Massouma (Massou)</option>
+
+<option value="1266">Lambrecht Régine (regine)</option>
+
+<option value="811">Eleouet Gaëtan (egaetan)</option>
+
+<option value="807">DE SAINT STEBAN Patrice (patou)</option>
+
+<option value="1213">Doshi Aakansha (ad1992)</option>
+
+<option value="1186">Reininger Elia (skude)</option>
+
+<option value="812">Tellis Philip (bluesmoon)</option>
+
+<option value="1219">  (Coryse)</option>
+
+<option value="1236">Chanclou Isabelle (isabellechanclou)</option>
+
+<option value="909">Cohen Jérémie (contact@jeremiecohen.fr)</option>
+
+<option value="1224">DAUPHANT Julien (jdauphant)</option>
+
+<option value="1172">Bouvard Yannick (yannick)</option>
+
+<option value="1207">Lahmam Mehdi (mehlah)</option>
+
+<option value="1256">Drouvroy Sophie (Cyberbaloo)</option>
+
+<option value="1271">Le Goas Anthony (anthony.legoas)</option>
+
+<option value="1208">RENARD-VIGNELLES Aurélie (aurelie)</option>
+
+<option value="1152">Achouri Aberrahim  (aberrahim)</option>
+
+<option value="1164">  (brtrdkeller)</option>
+
+<option value="1131">Ronce Samuel (RSamaium)</option>
+
+<option value="1173">Guillaumet Marie (marie1)</option>
+
+<option value="1121">RIGAUDIE David (david)</option>
+
+<option value="1247">Vachon Stéphanie (stephanie)</option>
+
+<option value="1231">J. Thibault (thibault)</option>
+
+<option value="1252">Pena Anthony (AnthonyPena)</option>
+
+<option value="1195">Feingold Lainey (LFLegal)</option>
+
+<option value="1420">Ramon Stéphanie (Steph)</option>
+
+<option value="1110">Rault Alizée (alizee.rault@lunaweb.fr)</option>
+
+<option value="1196">Poirier Amélie (amelie)</option>
+
+<option value="1180">Lescano Carroll Sofia (SofLesc)</option>
+
+<option value="1163">Gay Jean-Pierre (kantoche)</option>
+
+<option value="1201">Pyrat Jacques (jpyrat)</option>
+
+<option value="1263">Topçu Julien (julien)</option>
+
+<option value="1144">Zibaoui Marwan (RickyMarou)</option>
+
+<option value="1237">Chanclou Isabelle (ichan)</option>
+
+<option value="1267">Lambrecht Régine (regine.lambrecht@elevenways.be)</option>
+
+<option value="1087">Supiot Martin (webaaz)</option>
+
+<option value="1022">Abate Christopher (christopherabate)</option>
+
+<option value="1031">Gandy Marine (Mupsi)</option>
+
+<option value="1094">Giraud Nicolas (arcanneero)</option>
+
+<option value="1225">Fermigier Stefane (sfermigier)</option>
+
+<option value="985">Bréhin Maxime (mbrehin)</option>
+
+<option value="1272">villeneuve christophe (hellosct1)</option>
+
+<option value="792">MALON Arnaud (zemoko)</option>
+
+<option value="1086">Wilhelm Julien (JulienWilhelm)</option>
+
+<option value="830">Ricaud Anthony (rik)</option>
+
+<option value="1253">Pena Anthony (anthony)</option>
+
+<option value="999">Méric Sébastien (sebastien-meric)</option>
+
+<option value="1002">Boursier Antoine (antoine)</option>
+
+<option value="1258">  (mageekguy)</option>
+
+<option value="1132">Maugeais Martin (mmaugeais)</option>
+
+<option value="1221">Agé Marion (Marion)</option>
+
+<option value="1182">Murray Bre (bre)</option>
+
+<option value="1174">Lair François-Xavier (fx.lair)</option>
+
+<option value="1188">Brugnot Antonin (antonin)</option>
+
+<option value="1007">Mornet Gacoin Marjorie (marjorie)</option>
+
+<option value="1005">VALLON Patrick (PatrickV)</option>
+
+<option value="1136">Bouffel Aurore (abouffel)</option>
+
+<option value="1264">Vasques Xavier (xavier5)</option>
+
+<option value="1202">Daubois Alexandre (alexandre-daubois)</option>
+
+<option value="1029">Got Nicolas (nicolas)</option>
+
+<option value="1023">HUMBLET Jean-Louis (jean-louis)</option>
+
+<option value="1209">Marrone Rémy (infullswing)</option>
+
+<option value="1027">Haffez Zougane (Zougane)</option>
+
+<option value="1122">Albert Pierre (WebOnField)</option>
+
+<option value="1242">Cazenave Léo (NuclearSquid)</option>
+
+<option value="1257">Larmangeat Candice (candice)</option>
+
+<option value="1021">Gomez Damien (damiengomez)</option>
+
+<option value="1248">Guillard Olivier (olivier)</option>
+
+<option value="1145">Lux Matthieu (Swiip)</option>
+
+<option value="1238">Fiorentino Gauthier (Mintoo200)</option>
+
+<option value="1197">Jouve Cécile (cecile)</option>
+
+<option value="1273">Giraud Sebastien (seb)</option>
+
+<option value="1268">Alhomme 🧵👜👛 Marie (marie8)</option>
+
+<option value="1037">Archambeau Tony (tonyarchambeau)</option>
+
+<option value="1039">Federov Maxime (Excession)</option>
+
+<option value="1227">  (mklein)</option>
+
+<option value="1088">Cantet Thibaut (thibaut)</option>
+
+<option value="1269">Guillaume Aurélie (slig36)</option>
+
+<option value="1057">PENA Anthony (_Anthony_Pena)</option>
+
+<option value="1249">Hue Cyril (Horsty)</option>
+
+<option value="1166">Semichon Marine (marine)</option>
+
+<option value="931">Charollois Marcy Ericka (MarcyChama)</option>
+
+<option value="1065">Delafosse Arnaud (arnaud8)</option>
+
+<option value="753">Levy Aurélien (goetsu)</option>
+
+<option value="1421">  (julien@deniau.me)</option>
+
+<option value="1015">MARTIN Pascal (pascal.martin)</option>
+
+<option value="1165">Keller Bertrand (bertrandkeller)</option>
+
+<option value="1216">Le Hô Mewen (mewen.leho@gmail.com)</option>
+
+<option value="1233">Page Joseph (josephpage)</option>
+
+<option value="1050">Albuquerque Matheus (matheus)</option>
+
+<option value="1070">Duhem-Verdière Romy (romy@tetue.net)</option>
+
+<option value="1203">Fanuel, Ph.D Lison (lison)</option>
+
+<option value="771">Audema Juliette (juliette)</option>
+
+<option value="1063">Achain Alexandre (alexandre)</option>
+
+<option value="1239">Lamiaux Adeline (Enileda)</option>
+
+<option value="1046">MOUMNI Nourchen (nourchen)</option>
+
+<option value="1254">Bouchakour Solène (SBO)</option>
+
+<option value="1243">  (Chloe-Guilbaud)</option>
+
+<option value="1222">Starynkevitch Basile (bstarynk)</option>
+
+<option value="1066">Chandelier Lena (lchandelier)</option>
+
+<option value="1069">Makelele Josiane (josy-star)</option>
+
+<option value="934">Walter Stéphanie (stephaniewalter)</option>
+
+<option value="1089">Supiot Martin (martin)</option>
+
+<option value="1193">Gascard Carine (cgascard)</option>
+
+<option value="1259">Hardy Frédéric (frederic2)</option>
+
+<option value="1226">Goutay Nicolas (phacks)</option>
+
+<option value="1112">Jaouen Maéva (Maéva_Jaouen)</option>
+
+<option value="1220">Quibel Coryse (koryse)</option>
+
+<option value="852">Cavalier Franck (franck.cavalier)</option>
+
+<option value="1133">Pelletier Emmanuel (manuhabitela)</option>
+
+<option value="1189">Maurin David (imryck)</option>
+
+<option value="1276">Henriques Cristella (Cristella)</option>
+
+<option value="949">Delgado Bautista Luz (luz)</option>
+
+<option value="1130">Bonaventure Simon (s.bonaventure@empreintedigitale.coop)</option>
+
+<option value="888">Poirier Amélie (amelie.poirier@niji.fr)</option>
+
+<option value="1184">Brochier Flora (flora)</option>
+
+<option value="1262">Hervé Morgane (Nazcange)</option>
+
+<option value="1123">Haasser Agnès (tut-tuuut)</option>
+
+<option value="1275">Goerne Nora (ngoerne)</option>
+
+<option value="1210">Jacquet Esther (Esther)</option>
+
+<option value="1274">Plikoplok Ploc (le_vert_de_terre)</option>
+
+<option value="1181">Romagny Estelle (EstelleR)</option>
+
+<option value="1111">Jessier Myriam (myriam)</option>
+
+<option value="1096">Tranchet Anne-Sophie (astranchet)</option>
+
+<option value="1175">Gauffriau Henri (becaye)</option>
+
+<option value="1185">Lapina Colline (colline)</option>
+
+<option value="1215">Michel Biljana (kozmofor)</option>
+
+<option value="1307">Durrmeyer Corinne (inseo)</option>
+
+<option value="1300">Faubry Anne (annef)</option>
+
+<option value="1308">Jiménez Eva (Eva)</option>
+
+<option value="1284">Alfonsi Nousbaum Laure (Laure)</option>
+
+<option value="1287">Duhem Simon (duhem-s)</option>
+
+<option value="1309">Carbonnel Manon (manoncarbonnel)</option>
+
+<option value="1091">Destandau Marie (marie.destandau)</option>
+
+<option value="819">Pinna Olivier (olivier.pinna)</option>
+
+<option value="1298">Baret Guillaume (guillaume.baret)</option>
+
+<option value="1297">Béthus Ivan (ibethus)</option>
+
+<option value="1283">Cabestre Frédéric (fcabestre)</option>
+
+<option value="1117">Duldulao Devlin (webmasterdevlin)</option>
+
+<option value="1294">Aronson Dave (davearonson)</option>
+
+<option value="1288">Champenois Goulven (goulvench)</option>
+
+<option value="1278">Nauroy Dominique (dnauroy)</option>
+
+<option value="1279">Roux Noëlie (Nonorx)</option>
+
+<option value="1214"> Noëlie (Noelierx)</option>
+
+<option value="1285">Alves Mickaël (CruuzAzul)</option>
+
+<option value="1286">MOUMNI Nourchen (NourchenM)</option>
+
+<option value="1280">Buzzi Federica (FedericaBuzzi)</option>
+
+<option value="1293">  (fallainmat)</option>
+
+<option value="1292">Ben Khalfallah Héla (helabenkhalfallah)</option>
+
+<option value="1290"> Genma (genma.kun)</option>
+
+<option value="1282">  (dafargier@gmail.com)</option>
+
+<option value="980">Barbier Guillaume (GyombGraphics)</option>
+
+<option value="1303">Laafia Aicha (fofo)</option>
+
+<option value="1311">Salaün Gaël (Gael.Salaun)</option>
+
+<option value="1301">MELLERIN Simon (SimonMellerin)</option>
+
+<option value="1295">  (Marine_Verstraete)</option>
+
+<option value="1281">Hannequin Rémy (rhannequin)</option>
+
+<option value="1299">de Vauxmoret Emmanuel (magikmanu)</option>
+
+<option value="1306">Peron Lorie (Lorie)</option>
+
+<option value="1302">Brosset Patrick (captainbrosset)</option>
+
+<option value="1305">MERCIER Simon (Simon)</option>
+
+<option value="1310">Petit Benoit (bpetit)</option>
+
+<option value="1162">Lemaire Raphaël (rlemaire)</option>
+
+<option value="1313">Moulin Anaïs (Pygabu)</option>
+
+<option value="1340">Curbelo Layshi (layscurbelo@gmail.com)</option>
+
+<option value="1314">George, Esq., CPWA, ADS, APX Jaunita (Jaunita)</option>
+
+<option value="1315">  (yanuage)</option>
+
+<option value="1349">  (ah)</option>
+
+<option value="1316">iatsun iana (IAna)</option>
+
+<option value="1317">  (ComUrbi25)</option>
+
+<option value="1333">Rondini Ignacio (ignacio_rondini)</option>
+
+<option value="1319">Dey Jordan (Jordan_Dey)</option>
+
+<option value="1332">Achain Alexandre (alexandre.achain)</option>
+
+<option value="1326">EL AMRANI Ali (ali)</option>
+
+<option value="1318">Etienne IDOUX (PopsIDX)</option>
+
+<option value="1322">  (Mathilde-p)</option>
+
+<option value="1320">Guilliot Margerie (MargerieGuilliot)</option>
+
+<option value="1324">Ghali Fawaz (fawazghali)</option>
+
+<option value="1330">CANDY Antoine (AntoineC)</option>
+
+<option value="1325">Ghali Fawaz (fawaz)</option>
+
+<option value="1335">Champin Pierre-Antoine (p20n)</option>
+
+<option value="1327">  (Kevinbed)</option>
+
+<option value="1329">JOUANNO DANIEL Nicolas (jn-prod)</option>
+
+<option value="1321">Macaire Ferry Isabelle (Isabelle)</option>
+
+<option value="1354">Nicol Justine (Justine)</option>
+
+<option value="1331">Becquet Benjamin (bbecquet)</option>
+
+<option value="1351">Colombel Matthieu (Kornikan)</option>
+
+<option value="1348">Silfvernagel Håkan (agrevlis)</option>
+
+<option value="1323">Dolbeau Olivier (odolbeau)</option>
+
+<option value="1345">Hoang Lang (lhoang)</option>
+
+<option value="1353">Marleix Loïc (LMX)</option>
+
+<option value="1339">Florenceau - Les mains d'Audrey Audrey (audreyflorenceau)</option>
+
+<option value="1334">Lespinasse Ferréole (Ferréole)</option>
+
+<option value="1336">"Genma" HERLEDAN Jérôme (Genma_OSE)</option>
+
+<option value="1346">PRIOL Romuald (DocRoms)</option>
+
+<option value="1341">Lafréchoux Martin (martinlx)</option>
+
+<option value="1342">  (audrey.buffieres@ecedi.fr)</option>
+
+<option value="1344">Girardin Chloé (Chloe-Girardin)</option>
+
+<option value="1347">  (Robertrm)</option>
+
+<option value="1350">Tamani Laïla (Laila-Tamni)</option>
+
+<option value="1337">Bordier Nicolas (nicolas.bordier)</option>
+
+<option value="1355">  (MelvinPunny)</option>
+
+<option value="488">Poupard Luc (luc)</option>
+
+<option value="1369">Attallah-Gherardi Sara (saranossa)</option>
+
+<option value="1360">RIGAUDIE  👾 David (general03)</option>
+
+<option value="1361">Romankevich Natalia (natBizitza)</option>
+
+<option value="1362">GUILLOTEAU Vanessa (vanessaguilloteau)</option>
+
+<option value="1363">Sraka Yvan (yvan-sraka)</option>
+
+<option value="1104">Aniort Vincent (Aniort)</option>
+
+<option value="1384">Migot Denis (denismigot)</option>
+
+<option value="1370">AL Marashi LOLAH Rana (RanaMara)</option>
+
+<option value="1388">ZYSSMAN SYLVAIN (sylzys)</option>
+
+<option value="1365">Delacretaz Bertrand (bdelacretaz)</option>
+
+<option value="1372">Wolf Guillaume (GuillaumeW)</option>
+
+<option value="1381">El Jamil Soufiane (Soufiane)</option>
+
+<option value="1232">Leloutre-Got Willy (willyleloutregot)</option>
+
+<option value="1367">Moreno Sylvia (sylvia.moreno)</option>
+
+<option value="1358">Panon Christophe (ChristophePanon)</option>
+
+<option value="1373">Wolf Guillaume (guillaumewolf)</option>
+
+<option value="1385">EHRET Guillaume (javamind)</option>
+
+<option value="1374">Boucher Amelie (AmelieBoucher)</option>
+
+<option value="1352">PEYTEVIN Jérémy (PEYTEVIN)</option>
+
+<option value="1376">Ayoul Pierre-Yves (PYA)</option>
+
+<option value="1368">Vagner Alain (AlainVagner)</option>
+
+<option value="1371">Nauroy Dominique (dominiquenauroy)</option>
+
+<option value="1366">Daoust François (tidoust)</option>
+
+<option value="1378">Bué Matthieu (Twikito)</option>
+
+<option value="1383">Baliry Aurélie (AurelieBoreales)</option>
+
+<option value="1379">Drouet Jérémie (jdrouet)</option>
+
+<option value="1380">  (mike)</option>
+
+<option value="1386">  (soprevost)</option>
+
+<option value="1382">BALIRY AURÉLIE (abaliry@gmail.com)</option>
+
+<option value="1390">Topçu Julien (julien-topcu)</option>
+
+<option value="1389">Topçu Julien (JulienTopcu)</option>
+
+<option value="1391">Panigrahi Susobhit (susobhitp)</option>
+
+<option value="1377">Niedzwiedz Matthieu (Matthieu-Niedzwiedz)</option>
+
+<option value="1392">Bossard Cécilia (cecilia_bossard)</option>
+
+<option value="1393">Bouchery Frederic (FredBouchery)</option>
+
+<option value="1394">NIARD Emmie (e.niard@rennesmetropole.fr)</option>
+
+<option value="1395">Delosme Morgane (Morgane.Delosme)</option>
+
+<option value="1359">Batiot Bérengère (CoopCircuits)</option>
+
+<option value="1396">Bernabeu Yoan (yoanbernabeu)</option>
+
+<option value="1387">Prévost Sonia (so.prevost)</option>
+
+<option value="1364">Déramond Julien (julien-deramond)</option>
+
+<option value="1357">Roselier Yoann (Yoann)</option>
+
+<option value="1304">Fallet Romain (romain.fallet)</option>
+
+<option value="1404">Khy Céline (khyceline)</option>
+
+<option value="1400">Gendner Véronique (veronique.gendner@e-tissage.net)</option>
+
+<option value="1405">RIBEIRA Aurelia (Aurel)</option>
+
+<option value="1398">LEMATTRE-CIRADE Romuald (RomuLC)</option>
+
+<option value="1409">Brochoire Gwenaelle (GwenBro)</option>
+
+<option value="1410">Laurin Sandra (SandraLaurin)</option>
+
+<option value="1399">chevey alejandra (alechevey@pm.me)</option>
+
+<option value="1191">Pachet Rémi (remipachet@gmail.com)</option>
+
+<option value="1411">  (AN4ALL)</option>
+
+<option value="1401">Potel-Saville Marie (Lindsay)</option>
+
+<option value="1407">Frizzarin Nicolas (Nicoss54)</option>
+
+<option value="1338">Pastouret Jérémy (jenovateurs)</option>
+
+<option value="489">Devos Quentin (quentin)</option>
+
+<option value="1187">Vuillard Arthur (arthru)</option>
+
+<option value="1413">Alves Eduardo (dajufs)</option>
+
+<option value="1402">Lapouge 😺 Solène (solasido)</option>
+
+<option value="1403">Bill Lucien (lucienbill)</option>
+
+<option value="1406">Duque Alexis (alexisduque)</option>
+
+<option value="1343">ARCO Damien (DeafD@m)</option>
+
+<option value="1098">Abderemane Sarah (sarah.abderemane)</option>
+
+<option value="818">Duchateau Sylvie (sylvie)</option>
+
+<option value="1128">  (albane14)</option>
+
+<option value="1154">Lempereur Matthieu (MrYamous)</option>
+
+<option value="1397">Corfmat Chloé (chloecorfmat)</option>
+
+<option value="668">Legendre Damien (Uncoindpixel)</option>
+
+<option value="1408">Parizel Emeline (emeline.parizel@gmail.com)</option>
+
+<option value="1412">Gomez Damien (damien.gomez)</option>
+
+<option value="1328">Tissier Éléonore (Eléonore)</option>
+
+<option value="1244">Haffez Zoubeir (zoubeir.haffez)</option>
+
+<option value="1415">Lafont Aurelie (GingeredDesign)</option>
+
+<option value="1414">Thai Molika (Mo)</option>
+
+<option value="1169">Madeuf Natacha (natacha)</option>
+
+<option value="1296">Slomianowski Benjamin (benjamin_slo)</option>
+
+<option value="1080">Leroy Aline (aline.leroy)</option>
+
+<option value="1291">Rosset Sébastien (srosset81)</option>
+
+<option value="1312">EL MAIZI Hafsa (HafsaELMAIZI)</option>
+
+<option value="1416">GUERIN Jérôme (merojegrn)</option>
+
+<option value="1375">QUAI Cindy (Cindy75)</option>
+
+<option value="1105">Sredojevic Tamara (tamara)</option>
+
+<option value="1277">Bogdanova Katia  (katia.bogdanova)</option>
+
+</select></div>
+<div class="form-group"><label for="id_level">Niveau</label><select name="level" class="form-control" title="" id="id_level">
+<option value="" selected="">---------</option>
+
+<option value="BEGINNER">Débutant</option>
+
+<option value="INTERMEDIATE">Intermédiaire</option>
+
+<option value="EXPERT">Expert</option>
+
+<option value="ALL_LEVELS">Tous niveaux</option>
+
+</select></div>
+<div class="form-group"><label for="id_language">Langue</label><select name="language" class="form-control" title="" id="id_language">
+<option value="" selected="">---------</option>
+
+<option value="FR">français</option>
+
+<option value="EN">anglais</option>
+
+</select></div>
+<div class="form-group"><label for="id_format">Format</label><select name="format" class="form-control" title="" id="id_format">
+<option value="" selected="">---------</option>
+
+<option value="CONF">Conférence (50 mn dont 10 mn de questions)</option>
+
+<option value="MINICONF">Mini-conférence (30 mn dont 5 mn de questions)</option>
+
+<option value="WKSHP">Atelier (1h30)</option>
+
+<option value="DBLWKSHP">Atelier double (3h)</option>
+
+</select></div>
+<div class="form-group"><label for="id_status">Statut</label><select name="status" class="form-control" title="" id="id_status">
+<option value="" selected="">---------</option>
+
+<option value="DRAFT">Brouillon</option>
+
+<option value="SUBMITTED">Envoyé</option>
+
+<option value="CANCELLED">Annulé</option>
+
+</select></div>
+<div class="form-group"><label for="id_created_at">Created at</label><input type="text" name="created_at" class="form-control" placeholder="Created at" title="" id="id_created_at"></div>
+<div class="form-group"><label for="id_updated_at">Updated at</label><input type="text" name="updated_at" class="form-control" placeholder="Updated at" title="" id="id_updated_at"></div>
+<input type="submit" class="btn btn-secondary">
+</form></div>
+</div>
+
+<div class="table-responsive">
+<table class="table table-striped table-sm">
+<caption class="sr-only">Liste des propositions de sujets</caption>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Titre</th>
+    <th>Langue</th>
+    <th>Format</th>
+    <th>Mots-clef</th>
+    <th>Auteur(s)</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <td class="font-goodbrush">1626</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1626">Du bruit au signal - Comment l'ia generative est vraiement utilisée par les developpeurs.</a>
+
+            <a class="text-muted" href="/votes/paper/1626#comments" aria-label="1 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>1
+            </a>
+
+    </td>
+    <td>français</td>
+    <td>Conférence (50 mn dont 10 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=craft">craft</a></li>
+
+                <li><a href="/votes/search/?q=deviagen">deviagen</a></li>
+
+                <li><a href="/votes/search/?q=excellence technique">excellence technique</a></li>
+
+                <li><a href="/votes/search/?q=iagen">iagen</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1419">thomas clavier</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1622</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1622">Design systems @ Intuit</a>
+
+            <a class="text-muted" href="/votes/paper/1622#comments" aria-label="1 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>1
+            </a>
+
+    </td>
+    <td>anglais</td>
+    <td>Mini-conférence (30 mn dont 5 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=accessibility">accessibility</a></li>
+
+                <li><a href="/votes/search/?q=agents">agents</a></li>
+
+                <li><a href="/votes/search/?q=ai">ai</a></li>
+
+                <li><a href="/votes/search/?q=quality">quality</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1418">Kaelig Deloumeau-Prigent</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1621</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1621">Faire du web comme en 1996</a>
+
+            <a class="text-muted" href="/votes/paper/1621#comments" aria-label="2 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>2
+            </a>
+
+    </td>
+    <td>français</td>
+    <td>Mini-conférence (30 mn dont 5 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=Éco-conception">Éco-conception</a></li>
+
+                <li><a href="/votes/search/?q=Indie Web">Indie Web</a></li>
+
+                <li><a href="/votes/search/?q=Performance">Performance</a></li>
+
+                <li><a href="/votes/search/?q=Standards">Standards</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1248">Olivier Guillard</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1620</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1620">La mémoire du web : concevoir pour durer</a>
+
+            <a class="text-muted" href="/votes/paper/1620#comments" aria-label="1 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>1
+            </a>
+
+    </td>
+    <td>français</td>
+    <td>Conférence (50 mn dont 10 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=Archivage">Archivage</a></li>
+
+                <li><a href="/votes/search/?q=Philosophie">Philosophie</a></li>
+
+                <li><a href="/votes/search/?q=Standards">Standards</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1248">Olivier Guillard</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1619</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1619">Concevoir pour les robots qui nous remplacent</a>
+
+    </td>
+    <td>français</td>
+    <td>Mini-conférence (30 mn dont 5 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=IA">IA</a></li>
+
+                <li><a href="/votes/search/?q=UX/UI">UX/UI</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1248">Olivier Guillard</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1618</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1618">Désinformation et design : stratégies pour concevoir des interfaces anti-fake news</a>
+
+            <a class="text-muted" href="/votes/paper/1618#comments" aria-label="1 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>1
+            </a>
+
+    </td>
+    <td>français</td>
+    <td>Mini-conférence (30 mn dont 5 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=bonnes pratiques">bonnes pratiques</a></li>
+
+                <li><a href="/votes/search/?q=fake news">fake news</a></li>
+
+                <li><a href="/votes/search/?q=ux">ux</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1248">Olivier Guillard</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1617</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1617">Peut-on vraiment piloter l’accessibilité avec le context engineering ?</a>
+
+            <a class="text-muted" href="/votes/paper/1617#comments" aria-label="2 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>2
+            </a>
+
+    </td>
+    <td>français</td>
+    <td>Mini-conférence (30 mn dont 5 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=accessibilité">accessibilité</a></li>
+
+                <li><a href="/votes/search/?q=développement">développement</a></li>
+
+                <li><a href="/votes/search/?q=intelligence artificielle">intelligence artificielle</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/915">Emmanuelle Aboaf</a>
+
+    </td>
+</tr>
+
+<tr>
+    <td class="font-goodbrush">1616</td>
+    <td>
+
+
+
+        <a href="/votes/paper/1616">Accompagner son équipe et son client vers l'ère de l'inclusion web native</a>
+
+            <a class="text-muted" href="/votes/paper/1616#comments" aria-label="1 commentaires">
+            <svg aria-hidden="true" width="16" height="16" class="bi bi-chat"><use href="/static/images/symbols.svg#bi-chat"></use></svg>1
+            </a>
+
+    </td>
+    <td>français</td>
+    <td>Mini-conférence (30 mn dont 5 mn de questions)</td>
+    <td>
+        <ul class="list-unstyled">
+
+                <li><a href="/votes/search/?q=accessiblité">accessiblité</a></li>
+
+                <li><a href="/votes/search/?q=développement des compétences">développement des compétences</a></li>
+
+                <li><a href="/votes/search/?q=écoconception">écoconception</a></li>
+
+                <li><a href="/votes/search/?q=éthique">éthique</a></li>
+
+                <li><a href="/votes/search/?q=management">management</a></li>
+
+                <li><a href="/votes/search/?q=organisation">organisation</a></li>
+
+                <li><a href="/votes/search/?q=psychologie client">psychologie client</a></li>
+
+                <li><a href="/votes/search/?q=UX design">UX design</a></li>
+
+                <li><a href="/votes/search/?q=ux research">ux research</a></li>
+
+        </ul>
+    </td>
+    <td>
+
+            <a href="/votes/speaker/1417">Nicolas LE CAM</a>
+
+    </td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+
+
+<!-- Alerts -->
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+<h1 class="h2">
+Design systems @ Intuit
+<span class="badge badge-info"></span>
+</h1>
+<p class="text-right h2"></p>
+</div>
+<div class="row">
+<div class="col-12 col-md-8">
+<dl class="row mb-3">
+<div class="col-6 col-md-3">
+    <dt class="h5">Format</dt>
+    <dd>Mini-conférence (30 mn dont 5 mn de questions)</dd>
+</div>
+<div class="col-6 col-md-2">
+    <dt class="h5">Langue</dt>
+    <dd>anglais</dd>
+</div>
+<div class="col-6 col-md-2">
+    <dt class="h5">Niveau</dt>
+    <dd>Intermédiaire</dd>
+</div>
+<div class="col-6 col-md-2">
+    <dt class="h5">Édition</dt>
+    <dd>2026</dd>
+</div>
+<div class="col-6 col-md-3">
+    <dt class="h5">Mots-clef</dt>
+    <dd><ul class="list-unstyled">
+
+        <li class="d-inline"><a href="/votes/search/?q=accessibility">accessibility</a></li>
+
+        <li class="d-inline"><a href="/votes/search/?q=agents">agents</a></li>
+
+        <li class="d-inline"><a href="/votes/search/?q=ai">ai</a></li>
+
+        <li class="d-inline"><a href="/votes/search/?q=quality">quality</a></li>
+
+    </ul></dd>
+</div>
+</dl>
+
+
+
+<h2 class="h3">Le résumé en 140 caractères</h2>
+<div>The journey of creating a team of agents capable of building production quality, accessible React components from a Figma file.</div>
+<h2 class="h3 mt-3">La description complète</h2>
+<div><p>[talk can be either in English or French] I've worked on perfecting a team of agents for weeks at a large company that builds software used by half of Americans.</p>
+
+<p>The AI agents share a charter that enforces high accessibility and usability compliance, and use tools that have fast feedback loops ensuring adherence to WCAG standards (Storybook, axe-core, Chrome devtools). At this time, there are a couple of steps where human input is required (to make a few architectural decisions and for screen reader testing), but aside from that, almost everything else is automated (a11y, docs, code, tests, performance...).</p>
+
+<p>I have yet to write publicly about this, but I showed my setup to a few industry experts who confirmed this is on the edge, and I'd love to share my findings at Paris Web on the week of my bday!</p>
+
+<p>This could be turned into a workshop, as I'm giving a lot of Claude/Cursor workshops right now internally at Intuit and externally (for example, at the CSUN assistive tech conference).</p></div>
+<h2 class="h5 mt-3">Notes pour le staff</h2>
+<div><p>My employer may be able to pay for my flights and meals, perhaps even for accommodation.</p></div>
+<p class="text-muted text-right"><br>Sujet soumis le mardi 24 mars 2026</p>
+<hr>
+<h2 class="h4 title-with-mark">Commentaires</h2>
+<ul class="list-unstyled" id="comments">
+
+<li class="media my-4">
+    <img class="mr-3 rounded" src="https://secure.gravatar.com/avatar/d3f349d21147d09d740740f068126787.jpg?s=64&amp;d=mm&amp;r=g" alt="Gravatar">
+    <div class="media-body">
+        <p class="mt-0 mb-1">
+            <span class="text-gray-dark font-weight-bold">Gaël</span>,
+            <abbr class="text-muted" title="24 mars 2026 22:00">il y a 3&nbsp;jours, 23&nbsp;heures</abbr>
+        </p>
+        <p>Dommage que ça semble un mélange de prosélytisme et de marketing, j’aurais bien aimé revoir Kaelig à Paris Web :)</p>
+
+    </div>
+</li>
+
+</ul>
+<h3 class="h5" id="comment-label">Ajouter un commentaire <small class="text-muted"><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> accepté!</small></h3>
+<form method="POST" action="/votes/comments/paper/save/1622#comments" class="mb-4">
+<div class="form-group required"><textarea name="content" cols="40" rows="10" class="form-control" aria-labelledby="comment-label" required id="id_content"></textarea></div>
+<input type="hidden" name="paper" value="1622" id="id_paper">
+<input type="hidden" name="author" value="826" id="id_author"><input type="hidden" name="csrfmiddlewaretoken" value="Z498ng9v0WkiIzN0H0cbXK9PtYwtLBIYoSIq8PEjwSFIGrSemR7HTkLx66LsEKVT">
+<input type="submit" class="btn btn-secondary" value="Envoyer">
+</form>
+</div>
+<div class="col-12 col-md-4" id="accordion">
+<div class="btn-group w-100 mb-2" role="group" aria-label="Parcourir les sujets">
+
+<a href="/votes/paper/1621" class="btn btn-primary">Sujet précédent</a>
+
+
+<a href="/votes/paper/1626" class="btn btn-primary">Sujet suivant</a>
+
+</div>
+<div class="btn-group mb-2" role="group" aria-label="Parcourir les sujets à noter">
+
+<a class="btn btn-secondary disabled" aria-disabled="true">Sujet à voter précédent</a>
+
+
+<a class="btn btn-secondary disabled" aria-disabled="true">Sujet à voter suivant</a>
+
+</div>
+<div class="card"><div class="card-body">
+<h2 class="h5 title-with-mark mb-3">Auteurice(s)</h2>
+<ul>
+
+    <li><a href="/votes/speaker/1418">Kaelig Deloumeau-Prigent</a></li>
+
+</ul>
+
+
+<style>
+#dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-full, #dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-empty {
+width: 32px;
+height: 32px;
+background: url(/static/star-ratings/images/stars.png) no-repeat;
+background-size: 96px;
+}
+
+#dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-empty {
+background-position: -32px 0;
+}
+
+
+#dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-full:hover, #dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-empty:hover {
+background-position: -64px 0;
+}
+
+</style>
+
+
+
+
+<h2 class="h5 title-with-mark">Voter !</h2>
+<p class="card-text text-muted">Les étoiles indiquent la moyenne mais votre vote est pris en compte !</p>
+
+<div id="dsr7809bcd1ed7e4cdeb8e0041a61c73ce8" class="star-ratings" data-max-rating="5" data-avg-rating="1,571">
+
+	<div class="star-ratings-rating-stars-container">
+		<ul class="star-ratings-rating-background" aria-hidden="true">
+
+				<li>
+
+					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+						<input type="hidden" value="1" name="score">
+						<input type="hidden" value="/votes/paper/1622" name="next">
+						<button type="submit" class="star-ratings-rating-empty" data-score="1" tabindex="-1"></button>
+					</form>
+
+				</li>
+
+				<li>
+
+					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+						<input type="hidden" value="2" name="score">
+						<input type="hidden" value="/votes/paper/1622" name="next">
+						<button type="submit" class="star-ratings-rating-empty" data-score="2" tabindex="-1"></button>
+					</form>
+
+				</li>
+
+				<li>
+
+					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+						<input type="hidden" value="3" name="score">
+						<input type="hidden" value="/votes/paper/1622" name="next">
+						<button type="submit" class="star-ratings-rating-empty" data-score="3" tabindex="-1"></button>
+					</form>
+
+				</li>
+
+				<li>
+
+					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+						<input type="hidden" value="4" name="score">
+						<input type="hidden" value="/votes/paper/1622" name="next">
+						<button type="submit" class="star-ratings-rating-empty" data-score="4" tabindex="-1"></button>
+					</form>
+
+				</li>
+
+				<li>
+
+					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+						<input type="hidden" value="5" name="score">
+						<input type="hidden" value="/votes/paper/1622" name="next">
+						<button type="submit" class="star-ratings-rating-empty" data-score="5" tabindex="-1"></button>
+					</form>
+
+				</li>
+
+		</ul>
+
+		<ul class="star-ratings-rating-foreground" style="width: 31,4%">
+
+				<li>
+
+				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<input type="hidden" value="1" name="score">
+					<input type="hidden" value="/votes/paper/1622" name="next">
+					<button type="submit" class="star-ratings-rating-full" data-score="1"><span class="sr-only">Noter 1</span></button>
+				</form>
+
+				</li>
+
+				<li>
+
+				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<input type="hidden" value="2" name="score">
+					<input type="hidden" value="/votes/paper/1622" name="next">
+					<button type="submit" class="star-ratings-rating-full" data-score="2"><span class="sr-only">Noter 2</span></button>
+				</form>
+
+				</li>
+
+				<li>
+
+				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<input type="hidden" value="3" name="score">
+					<input type="hidden" value="/votes/paper/1622" name="next">
+					<button type="submit" class="star-ratings-rating-full" data-score="3"><span class="sr-only">Noter 3</span></button>
+				</form>
+
+				</li>
+
+				<li>
+
+				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<input type="hidden" value="4" name="score">
+					<input type="hidden" value="/votes/paper/1622" name="next">
+					<button type="submit" class="star-ratings-rating-full" data-score="4"><span class="sr-only">Noter 4</span></button>
+				</form>
+
+				</li>
+
+				<li>
+
+				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<input type="hidden" value="5" name="score">
+					<input type="hidden" value="/votes/paper/1622" name="next">
+					<button type="submit" class="star-ratings-rating-full" data-score="5"><span class="sr-only">Noter 5</span></button>
+				</form>
+
+				</li>
+
+		</ul>
+	</div>
+
+
+<dl>
+	<div class="d-flex">
+<dt class="card-text">Moyenne</dt>
+<dd class="font-goodbrush h6 pl-3">1,57</dd></div>
+
+<div class="d-flex">
+<dt class="card-text">Nombre de votes</dt>
+<dd class="pl-3"><span class="font-goodbrush h6 mb-0">7</span> (<button type="button" class="btn btn-link btn-sm p-0" data-toggle="modal" data-target="#ratings-staff">détails</button>)</dd></div>
+
+<div class="d-flex">
+<dt class="card-text">Ta note</dt>
+<dd class="font-goodbrush h6 pl-3">2</dd></div>
+</dl>
+
+<div class="star-ratings-errors"></div>
+
+
+
+
+</div>
+
+<h3 class="card-title h6">Le barème</h3>
+<ol class="card-text" reversed="">
+<li>Oh que oui, absolument !</li>
+<li>Ah oui ! Vraiment</li>
+<li>Oui</li>
+<li>Bof, à défaut de mieux</li>
+<li>Non, aucunement</li>
+</ol>
+</div>
+</div>
+<!-- Ratings modal -->
+<div class="modal" tabindex="-1" role="dialog" id="ratings-staff">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+    <h2 class="modal-title h5">Détail des votes</h2>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+        <span aria-hidden="true">×</span>
+    </button>
+</div>
+<div class="modal-body">
+    <ul>
+
+        <li>Aline a mis la note de 2</li>
+
+        <li>Joachim  a mis la note de 1</li>
+
+        <li>Sylvie a mis la note de 2</li>
+
+        <li>Franck a mis la note de 1</li>
+
+        <li>Guillaume a mis la note de 1</li>
+
+        <li>Sarah a mis la note de 2</li>
+
+        <li>Gaël a mis la note de 2</li>
+
+    </ul>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="accordion">
+<div class="card mb-0 border-bottom">
+<div class="card-header m-0" id="headingTwo">
+    <h6 class="m-0">
+        <button class="btn btn-block btn-lg text-left rounded-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            Thèmes
+        </button>
+    </h6>
+</div>
+
+<div id="collapseTwo" class="collapse show fade" aria-labelledby="headingTwo" data-parent="#accordion">
+    <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=front">Front</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=back">Back</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=design">Design/UX</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=a11y">Accessibilité</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=qualite">Qualité</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=greenit">Éco-conception</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=privacy">Vie privée</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=ethique">Éthique</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=securite">Sécurité</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=performance">Performance</a></li>
+
+
+
+        <li class="list-group-item">
+            <a href="/votes/tags/1622?action=change&amp;tag=inclassable">Inclassable</a></li>
+
+
+    </ul>
+</div>
+</div>
+<div class="card mt-0">
+<div class="card-header m-0" id="headingOne">
+    <h6 class="m-0">
+        <button class="btn btn-block btn-lg text-left rounded-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Actions
+        </button>
+    </h6>
+</div>
+
+<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+
+            <a href="/votes/tags/1622?action=add&amp;tag=spam">C'est du spam.</a></li>
+
+        <li class="list-group-item">
+
+                <a href="/votes/tags/1622?action=add&amp;tag=reprise">Conférence déjà présentée</a>
+
+        </li>
+        <li class="list-group-item">
+
+            <a href="/votes/tags/1622?action=add&amp;tag=product">Conférence produit</a>
+
+        </li>
+        <li class="list-group-item">
+
+            <a href="/votes/tags/1622?action=add&amp;tag=sponsor">Conférence sponsor</a>
+
+        </li>
+        <li class="list-group-item">
+
+            <a href="/votes/tags/1622?action=add&amp;tag=guest">Conférence invité</a>
+
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Alerts -->
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+<h1 class="h2">Manon Carbonnel</h1>
+<span class="text-right h2">
+
+</span>
+</div>
+<div class="row mb-5">
+<div class="col-12 col-md-4">
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="/media/selfies/avatar_5JoOu1I.jpg" alt="Manon Carbonnel">
+</div>
+</div>
+
+<div class="col-12 col-md-8">
+<ul class="nav nav-tabs">
+<li class="nav-item">
+    <a class="nav-link font-weight-bold active" data-toggle="tab" aria-current="page" href="#profile">Informations personnelles</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link font-weight-bold" data-toggle="tab" href="#biography">Biographie</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link font-weight-bold" data-toggle="tab" href="#papers">Propositions</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link font-weight-bold" data-toggle="tab" href="#social"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-share-fill mr-2" viewBox="0 0 16 16">
+	                      <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"></path>
+	                    </svg>Réseaux sociaux</a>
+</li>
+
+</ul>
+<div class="tab-content">
+<div class="tab-pane rounded-bottom bg-white rounded-bottom p-3 fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
+    <dl>
+        <dt>Adresse e-mail principale</dt>
+        <dd><a href="mailto:manon.carbonnel@gmail.com">manon.carbonnel@gmail.com</a></dd>
+        <dt>Pays de résidence</dt>
+        <dd>🇫🇷 France</dd>
+        <dt>Numéro de téléphone</dt>
+        <dd>+33678400207</dd>
+        <dt>Défraiement</dt>
+        <dd>J’ai besoin d’une prise en charge (totale ou partielle)</dd>
+        <dt>Société</dt>
+        <dd>Shodo</dd>
+        <dt>A déjà été orateur</dt>
+        <dd>Non <a href="/votes/speaker/manage/1309?presented=true" aria-label="Changer pour oui : A déjà été orateur">Changer pour oui</a></dd>
+    </dl>
+</div>
+<div class="tab-pane rounded-bottom bg-white p-3 fade" id="biography" role="tabpanel" aria-labelledby="profile-tab"><p>Je suis développeuse web (PHP, Python, JS), experte en intégration web et facilitatrice Agile.</p>
+
+<p>J'adore travailler en mob programming et je facilite des sessions de découverte pour @mobprogfr.</p>
+
+<p>Je suis passionnée par le HTML/CSS et j'ai créé @Csscade, une communauté française sur l'intégration web.</p>
+
+<p>J'aime apprendre le software craft et les tests, et je crois énormément à l'Agilité.</p></div>
+<div class="tab-pane rounded-bottom bg-white p-3 fade" id="social" role="tabpanel" aria-labelledby="contact-tab">
+    <dl>
+
+
+
+        <dt>GitHub</dt>
+        <dd><a target="_blank" href="https://github.com/https://github.com/manoncarbonnel">https://github.com/manoncarbonnel</a></dd>
+
+
+
+    </dl>
+</div>
+<div class="tab-pane rounded-bottom bg-white p-3 fade" id="papers" role="tabpanel" aria-labelledby="papers-tab">
+
+
+
+    <h2 class="h5">Édition 2025</h2>
+
+
+    <ul>
+        <li><a href="/votes/paper/1433">Crafter de meilleures UI, en pensant le DOM comme une API</a></li>
+        <li><a href="/votes/paper/1546">HTML et CSS : Des algorithmes ? Un kata ? Mais !</a></li>
+        <li><a href="/votes/paper/1432">“Make the change easy” : Apprivoiser le legacy avec les Object Calisthenics</a></li>
+    </ul>
+
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+                </main>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    </body>
+</html>
