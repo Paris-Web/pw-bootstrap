@@ -117,6 +117,12 @@ table {
 		border-left: .25rem solid silver;
 		padding-left: .5rem; }
 
+.media-body p ~ p {
+		margin-bottom: .25rem; }
+
+.media-body p:last-child {
+		margin-bottom: 0%; }
+
 .bi {
 		width: 1rem;
 		height: 1rem;
@@ -175,5 +181,11 @@ ul:not([class]) li {
 				background-image: url("../images/blue-mark.svg");
 				background-repeat: no-repeat; }
 
+.lines {
+		background: url("../images/bg-lines.svg") 50%/contain no-repeat;
+		height: 2rem;
+		margin: .25rem -1.25rem; }
+
 .font-goodbrush {
-		font-family: GOODBRUSH, Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif; }
+		font-family: GOODBRUSH, Kumbh, Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+		letter-spacing: .05em; }

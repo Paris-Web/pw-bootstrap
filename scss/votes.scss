@@ -91,6 +91,16 @@ table {
   padding-left: .5rem;
 }
 
+.media-body p {
+	~ p {
+		margin-bottom: .25rem;
+	}
+
+	&:last-child {
+		margin-bottom: 0%;
+	}
+}
+
 //
 // Icons
 //
@@ -178,10 +188,17 @@ ul:not([class]) li {
   }
 }
 
+.lines {
+  background: url('#{$img-path}/bg-lines.svg') 50% / contain no-repeat;
+  height: 2rem;
+  margin: .25rem -1.25rem;
+}
+
 //
 // Utilities
 //
 
 .font-goodbrush {
 	font-family: GOODBRUSH, $headings-font-family;
+	letter-spacing: .05em;
 }
