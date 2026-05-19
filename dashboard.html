@@ -18,9 +18,11 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse multi-collapse navbar-collapse" id="topnav">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/votes/">
-            <abbr title="Appel à sujets" aria-label="Appel à sujets">CfP</abbr>@Paris Web
-        </a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/votes/">
+                <abbr title="Appel à sujets" aria-label="Appel à sujets">CfP</abbr>
+                <span class="sr-only">Paris Web</span>
+                <span aria-hidden="true" class="rounded-circle bg-primary d-inline-block my-n1 p-1 small font-weight-bold">PW</span>
+            </a>
         <form class="w-100" method="GET" action="/votes/search/">
         <input class="form-control form-control-dark w-100" id="q" name="q" type="text" placeholder="Votre recherche (puis entrée)" aria-label="Recherche" value="">
             </form>
@@ -34,143 +36,142 @@
 
         <div class="container-fluid">
             <div class="row">
-                <nav role="navigation" aria-label="Navigation principale" class="navbar-expand-lg col-12 col-lg-2 bg-white sidebar mt-lg-5">
-    <div id="mainnav" class="collapse multi-collapse d-lg-block sidebar-sticky pt-3 pt-lg-0">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link" href="/votes/">
-		                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16">
-		                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"></path>
-		                </svg>
-                    Tableau de bord
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/votes/papers/">
-		                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi" viewBox="0 0 16 16">
-		                  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"></path>
-		                </svg>
-                    Propositions
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/votes/speakers/">
-	                	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
-		                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
-		                </svg>
-                    Orateurices
-                </a>
-            </li>
-            <li>
-                <div class="sidebar-heading px-3 mt-4 mb-1">Votes</div>
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/votes/remaining/">
+            <nav role="navigation" aria-label="Navigation principale" class="navbar-expand-lg col-12 col-lg-2 bg-white sidebar mt-lg-5">
+	<div id="mainnav" class="collapse multi-collapse d-lg-block sidebar-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/votes/">
+                            	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+	                  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"></path>
+	                </svg>
+                                Tableau de bord
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/votes/papers/">
+	                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
+	                  <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"></path>
+	                </svg>
+                                Propositions
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/votes/speakers/">
+	                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+	                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path>
+	                </svg>
+                                Orateurices
+                            </a>
+                        </li>
+                        <li>
+                            <div class="sidebar-heading px-3 mt-4 mb-1">Votes</div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/votes/remaining/">
 	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-bag-check" viewBox="0 0 16 16">
 	                          <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"></path>
 	                          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"></path>
 	                        </svg>
-                            Mon reste à voter
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/votes/my-scoreboard/">
+                                        Mon reste à voter
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/votes/my-scoreboard/">
 	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
 	                          <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"></path>
 	                        </svg>
-                            Mon classement
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/votes/scoreboard/">
-	                        	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
-		                          <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"></path>
-		                        </svg>
-                            Classement général
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <div class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
-                    <span>Le programme</span>
-                    <a class="d-flex align-items-center text-muted" target='_blank' href="/schedule/start/" data-toggle="tooltip" title="Mode sélection">
-	                    	<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mode sélection" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
-		                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
-		                      <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"></path>
-		                    </svg>
-                        &nbsp;
-                    </a>
-                </div>
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/">
-                        		<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
-		                          <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"></path>
-		                        </svg>
-                            Récapitulatif
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/conferences/">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+                                        Mon classement
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/votes/scoreboard/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+	                          <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"></path>
+	                        </svg>
+                                        Classement général
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
+                                <span>Le programme</span>
+                                <a class="d-flex align-items-center text-muted" target="_blank" href="/schedule/start/" data-toggle="tooltip" title="" data-original-title="Mode sélection">
+	                    <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mode sélection" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+	                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
+	                      <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"></path>
+	                    </svg>
+                                </a>
+                            </div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+	                          <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"></path>
+	                        </svg>
+                                        Récapitulatif
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/conferences/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
 	                          <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"></path>
 	                        </svg>
-                            Conférences
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/workshops/">
-		                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
-		                          <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"></path>
-		                        </svg>
-                            Ateliers
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/pending/">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                                        Conférences
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/workshops/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
+	                          <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145"></path>
+	                        </svg>
+                                        Ateliers
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/pending/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
 	                          <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"></path>
 	                        </svg>
-                            Le ballotage
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/mailing/">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                        Le ballotage
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/mailing/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
 	                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
 	                        </svg>
-                            Mailings
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <div class="sidebar-heading px-3 mt-4 mb-1">Suivi</div>
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/speakers/">
+                                        Mailings
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="sidebar-heading px-3 mt-4 mb-1">Suivi</div>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/speakers/">
 	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
-		                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
-		                          <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"></path>
-		                        </svg>
-                            Suivi orateurices
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/schedule/hosting/">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-house-check" viewBox="0 0 16 16">
+	                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path>
+	                          <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"></path>
+	                        </svg>
+                                        Suivi orateurices
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/schedule/hosting/">
+	                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-house-check" viewBox="0 0 16 16">
 	                          <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z"></path>
 	                          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514"></path>
 	                        </svg>
-                            Suivi hébergement
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+                                        Suivi hébergement
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
 
                 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
@@ -1606,30 +1607,33 @@
 
 
 
+
 <!-- Alerts -->
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
 <h1 class="h2">
-Design systems @ Intuit
-<span class="badge badge-info"></span>
+Penpot : découvrez le design libre, contribuez à l'open source
+
+<span class="badge badge-info">design</span>
+
 </h1>
-<p class="text-right h2"></p>
+
 </div>
 <div class="row">
 <div class="col-12 col-md-8">
 <dl class="row mb-3">
 <div class="col-6 col-md-3">
     <dt class="h5">Format</dt>
-    <dd>Mini-conférence (30 mn dont 5 mn de questions)</dd>
+    <dd>Atelier (1h30)</dd>
 </div>
 <div class="col-6 col-md-2">
     <dt class="h5">Langue</dt>
-    <dd>anglais</dd>
+    <dd>français</dd>
 </div>
 <div class="col-6 col-md-2">
     <dt class="h5">Niveau</dt>
-    <dd>Intermédiaire</dd>
+    <dd>Débutant</dd>
 </div>
 <div class="col-6 col-md-2">
     <dt class="h5">Édition</dt>
@@ -1639,13 +1643,11 @@ Design systems @ Intuit
     <dt class="h5">Mots-clef</dt>
     <dd><ul class="list-unstyled">
 
-        <li class="d-inline"><a href="/votes/search/?q=accessibility">accessibility</a></li>
+        <li class="d-inline"><a href="/votes/search/?q=design">design</a></li>
 
-        <li class="d-inline"><a href="/votes/search/?q=agents">agents</a></li>
+        <li class="d-inline"><a href="/votes/search/?q=open source">open source</a></li>
 
-        <li class="d-inline"><a href="/votes/search/?q=ai">ai</a></li>
-
-        <li class="d-inline"><a href="/votes/search/?q=quality">quality</a></li>
+        <li class="d-inline"><a href="/votes/search/?q=ui">ui</a></li>
 
     </ul></dd>
 </div>
@@ -1653,51 +1655,65 @@ Design systems @ Intuit
 
 
 
-<h2 class="h3">Le résumé en 140 caractères</h2>
-<div>The journey of creating a team of agents capable of building production quality, accessible React components from a Figma file.</div>
-<h2 class="h3 mt-3">La description complète</h2>
-<div><p>[talk can be either in English or French] I've worked on perfecting a team of agents for weeks at a large company that builds software used by half of Americans.</p>
+<div class="card">
+<div class="card-body">
+    <h2 class="h3">Le résumé en 140 caractères</h2>
+    <p>Découvrez Penpot par la pratique et repartez avec vos premières clés pour contribuer à un projet de design open source.</p>
+    <hr class="lines">
+    <h2 class="h3 mt-3">La description complète</h2>
+    <div><p>Vous avez entendu parler de Penpot, cette alternative gratuite et open source à Figma, mais vous n'avez jamais pris le temps de tester ? Voici l'occasion !</p>
 
-<p>The AI agents share a charter that enforces high accessibility and usability compliance, and use tools that have fast feedback loops ensuring adherence to WCAG standards (Storybook, axe-core, Chrome devtools). At this time, there are a couple of steps where human input is required (to make a few architectural decisions and for screen reader testing), but aside from that, almost everything else is automated (a11y, docs, code, tests, performance...).</p>
+<p>Dans la première partie de cet atelier, on découvrira ensemble les bases pour démarrer dans Penpot : pages, formes, typographies, couleurs... Et on abordera aussi les fonctionnalités plus avancées comme les Flex et Grid layouts, les composants, les design tokens.<br>Le tout au rythme de chacun, l'objectif étant de vous familiariser avec les différentes fonctionnalités.</p>
 
-<p>I have yet to write publicly about this, but I showed my setup to a few industry experts who confirmed this is on the edge, and I'd love to share my findings at Paris Web on the week of my bday!</p>
+<p>Dans la seconde partie on abordera la notion de l'open source design, ce que c'est concrètement et comment contribuer à un projet.</p>
 
-<p>This could be turned into a workshop, as I'm giving a lot of Claude/Cursor workshops right now internally at Intuit and externally (for example, at the CSUN assistive tech conference).</p></div>
-<h2 class="h5 mt-3">Notes pour le staff</h2>
-<div><p>My employer may be able to pay for my flights and meals, perhaps even for accommodation.</p></div>
-<p class="text-muted text-right"><br>Sujet soumis le mardi 24 mars 2026</p>
+<p>Cet atelier se basera sur un support en français créé pour l'occasion, qui sera ensuite partagé et enrichi au sein de la communauté Penpot.</p>
+
+<p>Participer à cet atelier, c'est donc aussi contribuer directement à une ressource open source qui servira à d'autres !</p>
+
+<p>Remarque: il n'est pas nécessaire d'avoir de l'expérience en design pour cet atelier, mais des connaissances vous aideront à avancer plus vite. Un ordinateur est requis pour participer.</p></div>
+
+    <hr class="lines">
+    <h2 class="h5 mt-3">Notes pour le staff</h2>
+    <div><p>Besoin d'une bonne connexion Internet, que les participant⋅es viennent avec leur ordinateur. Besoin donc de prises électriques. Besoin aussi d'un vidéo projecteur.</p>
+
+<p>Avec leur accord, j'enverrai par email aux participant⋅es une invitation à rejoindre une équipe Penpot quelques jours avant l'atelier. J'aurais donc besoin de récupérer la liste des emails des personnes inscrites.<br>Si ce n'est pas possible pour x raison, ce serait bien que la plupart des personnes aient créé leur compte Penpot en amont sur design.penpot.app, et je prendrai le temps pendant l'atelier pour envoyer les invitations.</p></div>
+
+</div>
+</div>
+<p class="text-muted text-right my-3 pr-4">Sujet soumis le <time datetime="2026-04-19T23:01:43.166548+02:00">dimanche 19 avril 2026</time></p>
 <hr>
 <h2 class="h4 title-with-mark">Commentaires</h2>
 <ul class="list-unstyled" id="comments">
 
 <li class="media my-4">
-    <img class="mr-3 rounded" src="https://secure.gravatar.com/avatar/d3f349d21147d09d740740f068126787.jpg?s=64&amp;d=mm&amp;r=g" alt="Gravatar">
-    <div class="media-body">
+    <img class="mr-3 rounded" src="https://secure.gravatar.com/avatar/250e80148f851f2bcd4ad053bfdd191c.jpg?s=64&amp;d=mm&amp;r=g" alt="Gravatar">
+    <div class="media-body bg-white rounded p-3">
         <p class="mt-0 mb-1">
-            <span class="text-gray-dark font-weight-bold">Gaël</span>,
-            <abbr class="text-muted" title="24 mars 2026 22:00">il y a 3&nbsp;jours, 23&nbsp;heures</abbr>
+            <span class="text-gray-dark font-weight-bold">Sunny</span>,
+            <abbr class="text-muted" title="28 avril 2026 11:21">il y a 3&nbsp;semaines</abbr>
         </p>
-        <p>Dommage que ça semble un mélange de prosélytisme et de marketing, j’aurais bien aimé revoir Kaelig à Paris Web :)</p>
+        <p>A priori pas possible d'inscrire les gens en amont car les gens décident le jour j de l'atelier qu'iels soient voir. Peut-être peux-t-on inciter les gens à créer leur compte sur design.penpot.app dans la description, dans le programme, sur les écrans/signalétiques diverses ?</p>
 
     </div>
 </li>
 
 </ul>
 <h3 class="h5" id="comment-label">Ajouter un commentaire <small class="text-muted"><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> accepté!</small></h3>
-<form method="POST" action="/votes/comments/paper/save/1622#comments" class="mb-4">
-<div class="form-group required"><textarea name="content" cols="40" rows="10" class="form-control" aria-labelledby="comment-label" required id="id_content"></textarea></div>
-<input type="hidden" name="paper" value="1622" id="id_paper">
-<input type="hidden" name="author" value="826" id="id_author"><input type="hidden" name="csrfmiddlewaretoken" value="Z498ng9v0WkiIzN0H0cbXK9PtYwtLBIYoSIq8PEjwSFIGrSemR7HTkLx66LsEKVT">
+<form method="POST" action="/votes/comments/paper/save/1753#comments" class="mb-4">
+<div class="form-group required"><textarea name="content" cols="40" rows="10" aria-labelledby="comment-label" class="form-control" title="" required="" id="id_content"></textarea></div>
+<input type="hidden" name="paper" value="1753" id="id_paper">
+<input type="hidden" name="author" value="826" id="id_author"><input type="hidden" name="csrfmiddlewaretoken" value="KVK3NzOK7n9toEisoSiVblid2KwodQ0NlYR3utwP7VS6PZS1YuotpUhxscbb3oZt">
 <input type="submit" class="btn btn-secondary" value="Envoyer">
 </form>
 </div>
 <div class="col-12 col-md-4" id="accordion">
 <div class="btn-group w-100 mb-2" role="group" aria-label="Parcourir les sujets">
 
-<a href="/votes/paper/1621" class="btn btn-primary">Sujet précédent</a>
+<a href="/votes/paper/1752" class="btn btn-primary">Sujet précédent</a>
 
 
-<a href="/votes/paper/1626" class="btn btn-primary">Sujet suivant</a>
+<a href="/votes/paper/1754" class="btn btn-primary">Sujet suivant</a>
 
 </div>
 <div class="btn-group mb-2" role="group" aria-label="Parcourir les sujets à noter">
@@ -1708,29 +1724,32 @@ Design systems @ Intuit
 <a class="btn btn-secondary disabled" aria-disabled="true">Sujet à voter suivant</a>
 
 </div>
-<div class="card"><div class="card-body">
-<h2 class="h5 title-with-mark mb-3">Auteurice(s)</h2>
-<ul>
+<div class="card">
+<div class="card-body">
+    <h2 class="h5 title-with-mark mb-3">Auteurice(s)</h2>
+    <ul>
 
-    <li><a href="/votes/speaker/1418">Kaelig Deloumeau-Prigent</a></li>
+        <li><a href="/votes/speaker/1502">Louis Chancé
 
-</ul>
+        </a></li>
+
+    </ul>
 
 
 <style>
-#dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-full, #dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-empty {
+#dsr164c7b545fc341b7953f4d10a1bbd78d .star-ratings-rating-full, #dsr164c7b545fc341b7953f4d10a1bbd78d .star-ratings-rating-empty {
 width: 32px;
 height: 32px;
 background: url(/static/star-ratings/images/stars.png) no-repeat;
 background-size: 96px;
 }
 
-#dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-empty {
+#dsr164c7b545fc341b7953f4d10a1bbd78d .star-ratings-rating-empty {
 background-position: -32px 0;
 }
 
 
-#dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-full:hover, #dsr7809bcd1ed7e4cdeb8e0041a61c73ce8 .star-ratings-rating-empty:hover {
+#dsr164c7b545fc341b7953f4d10a1bbd78d .star-ratings-rating-full:hover, #dsr164c7b545fc341b7953f4d10a1bbd78d .star-ratings-rating-empty:hover {
 background-position: -64px 0;
 }
 
@@ -1738,21 +1757,20 @@ background-position: -64px 0;
 
 
 
-
-<h2 class="h5 title-with-mark">Voter !</h2>
+<h2 class="title-with-mark h5 mt-3">Voter !</h2>
 <p class="card-text text-muted">Les étoiles indiquent la moyenne mais votre vote est pris en compte !</p>
 
-<div id="dsr7809bcd1ed7e4cdeb8e0041a61c73ce8" class="star-ratings" data-max-rating="5" data-avg-rating="1,571">
+<div id="dsr164c7b545fc341b7953f4d10a1bbd78d" class="star-ratings" data-max-rating="5" data-avg-rating="4,444">
 
 	<div class="star-ratings-rating-stars-container">
 		<ul class="star-ratings-rating-background" aria-hidden="true">
 
 				<li>
 
-					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 						<input type="hidden" value="1" name="score">
-						<input type="hidden" value="/votes/paper/1622" name="next">
+						<input type="hidden" value="/votes/paper/1753" name="next">
 						<button type="submit" class="star-ratings-rating-empty" data-score="1" tabindex="-1"></button>
 					</form>
 
@@ -1760,10 +1778,10 @@ background-position: -64px 0;
 
 				<li>
 
-					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 						<input type="hidden" value="2" name="score">
-						<input type="hidden" value="/votes/paper/1622" name="next">
+						<input type="hidden" value="/votes/paper/1753" name="next">
 						<button type="submit" class="star-ratings-rating-empty" data-score="2" tabindex="-1"></button>
 					</form>
 
@@ -1771,10 +1789,10 @@ background-position: -64px 0;
 
 				<li>
 
-					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 						<input type="hidden" value="3" name="score">
-						<input type="hidden" value="/votes/paper/1622" name="next">
+						<input type="hidden" value="/votes/paper/1753" name="next">
 						<button type="submit" class="star-ratings-rating-empty" data-score="3" tabindex="-1"></button>
 					</form>
 
@@ -1782,10 +1800,10 @@ background-position: -64px 0;
 
 				<li>
 
-					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 						<input type="hidden" value="4" name="score">
-						<input type="hidden" value="/votes/paper/1622" name="next">
+						<input type="hidden" value="/votes/paper/1753" name="next">
 						<button type="submit" class="star-ratings-rating-empty" data-score="4" tabindex="-1"></button>
 					</form>
 
@@ -1793,10 +1811,10 @@ background-position: -64px 0;
 
 				<li>
 
-					<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-						<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+					<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+						<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 						<input type="hidden" value="5" name="score">
-						<input type="hidden" value="/votes/paper/1622" name="next">
+						<input type="hidden" value="/votes/paper/1753" name="next">
 						<button type="submit" class="star-ratings-rating-empty" data-score="5" tabindex="-1"></button>
 					</form>
 
@@ -1804,14 +1822,14 @@ background-position: -64px 0;
 
 		</ul>
 
-		<ul class="star-ratings-rating-foreground" style="width: 31,4%">
+		<ul class="star-ratings-rating-foreground" style="width: 88,9%">
 
 				<li>
 
-				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+				<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 					<input type="hidden" value="1" name="score">
-					<input type="hidden" value="/votes/paper/1622" name="next">
+					<input type="hidden" value="/votes/paper/1753" name="next">
 					<button type="submit" class="star-ratings-rating-full" data-score="1"><span class="sr-only">Noter 1</span></button>
 				</form>
 
@@ -1819,10 +1837,10 @@ background-position: -64px 0;
 
 				<li>
 
-				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+				<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 					<input type="hidden" value="2" name="score">
-					<input type="hidden" value="/votes/paper/1622" name="next">
+					<input type="hidden" value="/votes/paper/1753" name="next">
 					<button type="submit" class="star-ratings-rating-full" data-score="2"><span class="sr-only">Noter 2</span></button>
 				</form>
 
@@ -1830,10 +1848,10 @@ background-position: -64px 0;
 
 				<li>
 
-				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+				<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 					<input type="hidden" value="3" name="score">
-					<input type="hidden" value="/votes/paper/1622" name="next">
+					<input type="hidden" value="/votes/paper/1753" name="next">
 					<button type="submit" class="star-ratings-rating-full" data-score="3"><span class="sr-only">Noter 3</span></button>
 				</form>
 
@@ -1841,10 +1859,10 @@ background-position: -64px 0;
 
 				<li>
 
-				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+				<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 					<input type="hidden" value="4" name="score">
-					<input type="hidden" value="/votes/paper/1622" name="next">
+					<input type="hidden" value="/votes/paper/1753" name="next">
 					<button type="submit" class="star-ratings-rating-full" data-score="4"><span class="sr-only">Noter 4</span></button>
 				</form>
 
@@ -1852,10 +1870,10 @@ background-position: -64px 0;
 
 				<li>
 
-				<form action="/ratings/10/1622/" class="star-ratings-rate-action" method="post">
-					<input type="hidden" name="csrfmiddlewaretoken" value="qsOCSsG3ZdApdEfCzPeKenytJA6exd43PgnUD1bRv9VPbwkQeG9gaXabmIldqmhY">
+				<form action="/ratings/10/1753/" class="star-ratings-rate-action" method="post">
+					<input type="hidden" name="csrfmiddlewaretoken" value="ojcqmfkqb6E2F4PJ0O8La6zLGNrgwC2NZmjq392vbEnF6ppiAqejoFy56f63ma1t">
 					<input type="hidden" value="5" name="score">
-					<input type="hidden" value="/votes/paper/1622" name="next">
+					<input type="hidden" value="/votes/paper/1753" name="next">
 					<button type="submit" class="star-ratings-rating-full" data-score="5"><span class="sr-only">Noter 5</span></button>
 				</form>
 
@@ -1865,18 +1883,29 @@ background-position: -64px 0;
 	</div>
 
 
+
 <dl>
-	<div class="d-flex">
-<dt class="card-text">Moyenne</dt>
-<dd class="font-goodbrush h6 pl-3">1,57</dd></div>
+	<div class="star-ratings-rating-average d-flex">
+		<dt class="card-text">Moyenne</dt>
+		<dd class="star-ratings-rating-value font-goodbrush h6 pl-3">4,44</dd>
+	</div>
 
-<div class="d-flex">
+
+<div class="star-ratings-rating-count d-flex">
 <dt class="card-text">Nombre de votes</dt>
-<dd class="pl-3"><span class="font-goodbrush h6 mb-0">7</span> (<button type="button" class="btn btn-link btn-sm p-0" data-toggle="modal" data-target="#ratings-staff">détails</button>)</dd></div>
+<dd class="pl-3">
+<span class="star-ratings-rating-value font-goodbrush h6">18</span>
+<button type="button" class="btn btn-link btn-sm border py-0 px-1" data-toggle="modal" data-target="#ratings-staff">détails</button>
+</dd>
+</div>
 
-<div class="d-flex">
+
+<div class="star-ratings-rating-user d-flex">
 <dt class="card-text">Ta note</dt>
-<dd class="font-goodbrush h6 pl-3">2</dd></div>
+
+<dd class="star-ratings-rating-value pl-3 font-goodbrush h6 mb-0">5</dd>
+
+</div>
 </dl>
 
 <div class="star-ratings-errors"></div>
@@ -1894,8 +1923,7 @@ background-position: -64px 0;
 <li>Bof, à défaut de mieux</li>
 <li>Non, aucunement</li>
 </ol>
-</div>
-</div>
+
 <!-- Ratings modal -->
 <div class="modal" tabindex="-1" role="dialog" id="ratings-staff">
 <div class="modal-dialog" role="document">
@@ -1907,21 +1935,43 @@ background-position: -64px 0;
     </button>
 </div>
 <div class="modal-body">
-    <ul>
+    <ul class="star-ratings-list">
 
-        <li>Aline a mis la note de 2</li>
+        <li>Guillaume a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
 
-        <li>Joachim  a mis la note de 1</li>
+        <li>Gaël a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
 
-        <li>Sylvie a mis la note de 2</li>
+        <li>Franck a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
 
-        <li>Franck a mis la note de 1</li>
+        <li>Anne a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
 
-        <li>Guillaume a mis la note de 1</li>
+        <li>Sylvie a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
 
-        <li>Sarah a mis la note de 2</li>
+        <li>Joachim  a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
 
-        <li>Gaël a mis la note de 2</li>
+        <li>gerald a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
+
+        <li>Luc a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Aline a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
+
+        <li>François a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Estelle a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Sarah a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Yann a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Katia  a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
+
+        <li>Damien a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Quentin a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">4</span></li>
+
+        <li>Sunny a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
+
+        <li>Sarah a mis la note de <span class="font-goodbrush h6 mb-0 text-secondary">5</span></li>
 
     </ul>
 </div>
@@ -1933,113 +1983,111 @@ background-position: -64px 0;
 </div>
 
 
+</div>
+</div>
 <div class="accordion">
-<div class="card mb-0 border-bottom">
-<div class="card-header m-0" id="headingTwo">
-    <h6 class="m-0">
-        <button class="btn btn-block btn-lg text-left rounded-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            Thèmes
-        </button>
-    </h6>
-</div>
+<div class="card mb-0">
+    <div class="card-header m-0" id="headingTwo">
+        <h6 class="m-0">
+            <button class="btn btn-block btn-lg text-left rounded-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Thèmes
+            </button>
+        </h6>
+    </div>
 
-<div id="collapseTwo" class="collapse show fade" aria-labelledby="headingTwo" data-parent="#accordion">
-    <ul class="list-group list-group-flush">
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <ul class="list-group list-group-flush">
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=front">Front</a></li>
-
-
-
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=back">Back</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=front">Front</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=design">Design/UX</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=back">Back</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=a11y">Accessibilité</a></li>
+
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=a11y">Accessibilité</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=qualite">Qualité</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=qualite">Qualité</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=greenit">Éco-conception</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=greenit">Éco-conception</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=privacy">Vie privée</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=privacy">Vie privée</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=ethique">Éthique</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=ethique">Éthique</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=securite">Sécurité</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=securite">Sécurité</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=performance">Performance</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=performance">Performance</a></li>
 
 
 
-        <li class="list-group-item">
-            <a href="/votes/tags/1622?action=change&amp;tag=inclassable">Inclassable</a></li>
+            <li class="list-group-item">
+                <a href="/votes/tags/1753?action=change&amp;tag=inclassable">Inclassable</a></li>
 
 
-    </ul>
-</div>
+        </ul>
+    </div>
 </div>
 <div class="card mt-0">
-<div class="card-header m-0" id="headingOne">
-    <h6 class="m-0">
-        <button class="btn btn-block btn-lg text-left rounded-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Actions
-        </button>
-    </h6>
-</div>
+    <div class="card-header m-0" id="headingOne">
+        <h6 class="m-0">
+            <button class="btn btn-block btn-lg text-left rounded-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Actions
+            </button>
+        </h6>
+    </div>
 
-<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
 
-            <a href="/votes/tags/1622?action=add&amp;tag=spam">C'est du spam.</a></li>
+                <a href="/votes/tags/1753?action=add&amp;tag=spam">C'est du spam.</a></li>
 
-        <li class="list-group-item">
+            <li class="list-group-item">
 
-                <a href="/votes/tags/1622?action=add&amp;tag=reprise">Conférence déjà présentée</a>
+                    <a href="/votes/tags/1753?action=add&amp;tag=reprise">Conférence déjà présentée</a>
 
-        </li>
-        <li class="list-group-item">
+            </li>
+            <li class="list-group-item">
 
-            <a href="/votes/tags/1622?action=add&amp;tag=product">Conférence produit</a>
+                <a href="/votes/tags/1753?action=add&amp;tag=product">Conférence produit</a>
 
-        </li>
-        <li class="list-group-item">
+            </li>
+            <li class="list-group-item">
 
-            <a href="/votes/tags/1622?action=add&amp;tag=sponsor">Conférence sponsor</a>
+                <a href="/votes/tags/1753?action=add&amp;tag=sponsor">Conférence sponsor</a>
 
-        </li>
-        <li class="list-group-item">
+            </li>
+            <li class="list-group-item">
 
-            <a href="/votes/tags/1622?action=add&amp;tag=guest">Conférence invité</a>
+                <a href="/votes/tags/1753?action=add&amp;tag=guest">Conférence invité</a>
 
-        </li>
-    </ul>
-</div>
+            </li>
+        </ul>
+    </div>
 </div>
 </div>
 </div>
@@ -2051,15 +2099,16 @@ background-position: -64px 0;
 
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-<h1 class="h2">Manon Carbonnel</h1>
-<span class="text-right h2">
+<h1 class="h2">Anne-Sophie Tranchet</h1>
 
-</span>
 </div>
 <div class="row mb-5">
 <div class="col-12 col-md-4">
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="/media/selfies/avatar_5JoOu1I.jpg" alt="Manon Carbonnel">
+<div class="card card-portrait w-100">
+
+    <img class="card-img-top" src="static/images/avatar-rond-400x400.jpg" alt="">
+
+
 </div>
 </div>
 
@@ -2075,45 +2124,49 @@ background-position: -64px 0;
     <a class="nav-link font-weight-bold" data-toggle="tab" href="#papers">Propositions</a>
 </li>
 <li class="nav-item">
-    <a class="nav-link font-weight-bold" data-toggle="tab" href="#social"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-share-fill mr-2" viewBox="0 0 16 16">
+    <a class="nav-link font-weight-bold" data-toggle="tab" href="#social">
+	                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="16" height="16" fill="currentColor" class="bi bi-share-fill mr-2" viewBox="0 0 16 16">
 	                      <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"></path>
-	                    </svg>Réseaux sociaux</a>
+	                    </svg>
+	                    Réseaux sociaux
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link font-weight-bold" data-toggle="tab" href="#followup">Suivi</a>
 </li>
 
 </ul>
 <div class="tab-content">
-<div class="tab-pane rounded-bottom bg-white rounded-bottom p-3 fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
+<div class="tab-pane rounded-bottom bg-white p-3 fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
     <dl>
         <dt>Adresse e-mail principale</dt>
-        <dd><a href="mailto:manon.carbonnel@gmail.com">manon.carbonnel@gmail.com</a></dd>
+        <dd><a href="mailto:as.tranchet@gmail.com">as.tranchet@gmail.com</a></dd>
         <dt>Pays de résidence</dt>
         <dd>🇫🇷 France</dd>
         <dt>Numéro de téléphone</dt>
-        <dd>+33678400207</dd>
+        <dd>+33669577413</dd>
         <dt>Défraiement</dt>
         <dd>J’ai besoin d’une prise en charge (totale ou partielle)</dd>
         <dt>Société</dt>
-        <dd>Shodo</dd>
+        <dd>DINUM (Direction Interministérielle du Numérique)</dd>
         <dt>A déjà été orateur</dt>
-        <dd>Non <a href="/votes/speaker/manage/1309?presented=true" aria-label="Changer pour oui : A déjà été orateur">Changer pour oui</a></dd>
+        <dd>Non <a href="/votes/speaker/manage/1096?presented=true" aria-label="Changer pour oui : A déjà été orateur">Changer pour oui</a></dd>
     </dl>
 </div>
-<div class="tab-pane rounded-bottom bg-white p-3 fade" id="biography" role="tabpanel" aria-labelledby="profile-tab"><p>Je suis développeuse web (PHP, Python, JS), experte en intégration web et facilitatrice Agile.</p>
-
-<p>J'adore travailler en mob programming et je facilite des sessions de découverte pour @mobprogfr.</p>
-
-<p>Je suis passionnée par le HTML/CSS et j'ai créé @Csscade, une communauté française sur l'intégration web.</p>
-
-<p>J'aime apprendre le software craft et les tests, et je crois énormément à l'Agilité.</p></div>
+<div class="tab-pane rounded-bottom bg-white p-3 fade" id="biography" role="tabpanel" aria-labelledby="profile-tab"><p>UX Designer touche à tout (accessibilité, contenu, écoconception), Anne-Sophie travaille actuellement à la DINUM pour concevoir des services numériques publics plus inclusifs.</p></div>
 <div class="tab-pane rounded-bottom bg-white p-3 fade" id="social" role="tabpanel" aria-labelledby="contact-tab">
     <dl>
 
 
 
+
         <dt>GitHub</dt>
-        <dd><a target="_blank" href="https://github.com/https://github.com/manoncarbonnel">https://github.com/manoncarbonnel</a></dd>
+        <dd><a target="_blank" href="astranchet">astranchet</a></dd>
 
 
+        <dt>Autres réseaux</dt>
+        <dd><p>Mastodon : https://framapiaf.org/@annso<br>Linkedin : https://www.linkedin.com/in/tranchet/</p></dd>
 
     </dl>
 </div>
@@ -2121,18 +2174,98 @@ background-position: -64px 0;
 
 
 
-    <h2 class="h5">Édition 2025</h2>
-
+    <h2 class="h5">Édition 2026</h2>
 
     <ul>
-        <li><a href="/votes/paper/1433">Crafter de meilleures UI, en pensant le DOM comme une API</a></li>
-        <li><a href="/votes/paper/1546">HTML et CSS : Des algorithmes ? Un kata ? Mais !</a></li>
-        <li><a href="/votes/paper/1432">“Make the change easy” : Apprivoiser le legacy avec les Object Calisthenics</a></li>
+
+	                        <li><a href="/votes/paper/1708">Objectif FALC</a></li>
+
     </ul>
 
 
+    <h2 class="h5">Édition 2025</h2>
+
+    <ul>
+
+	                        <li><a href="/votes/paper/1495">Accessibility Ops : passer l'accessibilité à l'échelle</a></li>
+
+    </ul>
+
+
+    <h2 class="h5">Édition 2024</h2>
+
+    <ul>
+
+	                        <li><a href="/votes/paper/1338">Easy Checks pour vérifier l'accessibilité</a></li>
+
+	                        <li><a href="/votes/paper/1319">L’accessibilité à l’échelle : REX d’un incubateur de services numériques</a></li>
+
+    </ul>
+
 </div>
 
+<div class="tab-pane rounded-bottom bg-white p-3 fade" id="followup" role="tabpanel" aria-labelledby="followup-tab">
+    <dl>
+        <dt>A confirmé sa venue</dt>
+        <dd>Oui </dd>
+        <dt>Biographie relue</dt>
+        <dd>Oui </dd>
+        <dt>A signé son <abbr title="Autorisation de Droit à l’Image" aria-label="Autorisation de Droit à l’Image">ADI</abbr></dt>
+        <dd>Non <a href="/votes/participation/manage/142?adi=true" aria-label="Marquer comme fait : A signé son ADI">Marquer comme fait</a></dd>
+        <dt>A demandé un hébergement</dt>
+        <dd>Pas renseigné</dd>
+
+        <dt>Participe au restaurant Orateurices</dt>
+        <dd>Pas renseigné</dd>
+    </dl>
+    <hr>
+    <h2 class="h4">Commentaires</h2>
+    <ul class="list-unstyled" id="comments">
+
+        <li>Il n’y a encore aucun commentaire !</li>
+
+    </ul>
+    <h3 class="h5">Ajouter un commentaire <small class="text-muted"><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> accepté!</small></h3>
+    <form method="POST" action="/votes/comments/participation/save/1096" class="mb-4">
+        <div class="form-group required"><textarea name="content" cols="40" rows="10" aria-labelledby="comment-label" class="form-control" title="" required="" id="id_content"></textarea></div>
+<input type="hidden" name="participation" value="142" id="id_participation">
+<input type="hidden" name="author" value="826" id="id_author"><input type="hidden" name="csrfmiddlewaretoken" value="VTXVDe0u8kIeaIsAfYasAa81kJ78zOKAwW4Vk8Iz8SrRB329PAg0OJ7lKbMVpmJg">
+        <input type="submit" class="btn btn-secondary" value="Envoyer">
+    </form>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- Alerts -->
+
+<h1 class="h2">Récapitulatif</h1>
+<p class="lead">34 sujets ont été sélectionnés et 4 mis en réserve pour le programme de cette édition !</p>
+<div class="d-flex flex-wrap justify-content-around mb-5">
+<div class="card">
+<div class="card-body px-5 py-4">
+<h5 class="card-subtitle text-muted text-center mb-4">Conférences</h5>
+<p class="card-text h3 font-goodbrush text-center"><span class="h1 text-primary font-goodbrush">8</span><span class="text-black-50">/8</span> <sup>+2</sup></p>
+</div>
+</div>
+<div class="card">
+<div class="card-body px-5 py-4">
+<h5 class="card-subtitle text-muted text-center mb-4">Mini-conférences</h5>
+<p class="card-text h3 font-goodbrush text-center"><span class="h1 text-primary font-goodbrush">8</span><span class="text-black-50">/8</span> <sup>+2</sup></p>
+</div>
+</div>
+<div class="card">
+<div class="card-body px-5 py-4">
+<h5 class="card-subtitle text-muted text-center mb-4">Ateliers</h5>
+<p class="card-text h3 font-goodbrush text-center"><span class="h1 text-primary font-goodbrush">12</span><span class="text-black-50">/12</span></p>
+</div>
+</div>
+<div class="card">
+<div class="card-body px-5 py-4">
+<h5 class="card-subtitle text-muted text-center mb-4">Ateliers double</h5>
+<p class="card-text h3 font-goodbrush text-center"><span class="h1 text-primary font-goodbrush">6</span><span class="text-black-50">/6</span></p>
 </div>
 </div>
 </div>
